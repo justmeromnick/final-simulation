@@ -5,10 +5,457 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Circuit Craft: Electrical Simulator & Vocational Trainer</title>
     <!-- Styles are bundled for offline use. -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-bottom-1\.5{bottom:-.375rem}.-top-1\.5{top:-.375rem}.left-2{left:.5rem}.right-2{right:.5rem}.right-4{right:1rem}.top-4{top:1rem}.isolate{isolation:isolate}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.my-1{margin-top:.25rem;margin-bottom:.25rem}.mb-0\.5{margin-bottom:.125rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mr-1{margin-right:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-0{height:0}.h-1{height:.25rem}.h-10{height:2.5rem}.h-14{height:3.5rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-28{height:7rem}.h-36{height:9rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-full{height:100%}.h-screen{height:100vh}.w-0{width:0}.w-10{width:2.5rem}.w-2{width:.5rem}.w-2\.5{width:.625rem}.w-28{width:7rem}.w-3\/4{width:75%}.w-4{width:1rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-64{width:16rem}.w-full{width:100%}.w-screen{width:100vw}.max-w-3xl{max-width:48rem}.max-w-lg{max-width:32rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1}.scale-110,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-move{cursor:move}.cursor-pointer{cursor:pointer}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.border-amber-500\/20{border-color:rgba(245,158,11,.2)}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-amber-600\/40{border-color:rgba(217,119,6,.4)}.border-amber-600\/50{border-color:rgba(217,119,6,.5)}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-emerald-800\/80{border-color:rgba(6,95,70,.8)}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165/var(--tw-border-opacity,1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94/var(--tw-border-opacity,1))}.border-stone-400{--tw-border-opacity:1;border-color:rgb(168 162 158/var(--tw-border-opacity,1))}.border-stone-600{--tw-border-opacity:1;border-color:rgb(87 83 78/var(--tw-border-opacity,1))}.border-stone-700{--tw-border-opacity:1;border-color:rgb(68 64 60/var(--tw-border-opacity,1))}.border-stone-700\/80{border-color:rgba(68,64,60,.8)}.border-stone-800{--tw-border-opacity:1;border-color:rgb(41 37 36/var(--tw-border-opacity,1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-500\/10{background-color:rgba(245,158,11,.1)}.bg-amber-500\/20{background-color:rgba(245,158,11,.2)}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.bg-amber-900\/70{background-color:rgba(120,53,15,.7)}.bg-black\/70{background-color:rgba(0,0,0,.7)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-600\/30{background-color:rgba(5,150,105,.3)}.bg-emerald-950\/80{background-color:rgba(2,44,34,.8)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-red-600\/70{background-color:rgba(220,38,38,.7)}.bg-rose-600\/30{background-color:rgba(225,29,72,.3)}.bg-stone-800{--tw-bg-opacity:1;background-color:rgb(41 37 36/var(--tw-bg-opacity,1))}.bg-stone-900{--tw-bg-opacity:1;background-color:rgb(28 25 23/var(--tw-bg-opacity,1))}.bg-stone-900\/50{background-color:rgba(28,25,23,.5)}.bg-stone-900\/90{background-color:rgba(28,25,23,.9)}.bg-stone-950{--tw-bg-opacity:1;background-color:rgb(12 10 9/var(--tw-bg-opacity,1))}.bg-stone-950\/80{background-color:rgba(12,10,9,.8)}.bg-stone-950\/90{background-color:rgba(12,10,9,.9)}.bg-stone-950\/95{background-color:rgba(12,10,9,.95)}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-0\.5{padding-left:.125rem;padding-right:.125rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.pb-1{padding-bottom:.25rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-amber-500\/80{color:rgba(245,158,11,.8)}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-stone-100{--tw-text-opacity:1;color:rgb(245 245 244/var(--tw-text-opacity,1))}.text-stone-200{--tw-text-opacity:1;color:rgb(231 229 228/var(--tw-text-opacity,1))}.text-stone-300{--tw-text-opacity:1;color:rgb(214 211 209/var(--tw-text-opacity,1))}.text-stone-400{--tw-text-opacity:1;color:rgb(168 162 158/var(--tw-text-opacity,1))}.text-stone-500{--tw-text-opacity:1;color:rgb(120 113 108/var(--tw-text-opacity,1))}.text-stone-950{--tw-text-opacity:1;color:rgb(12 10 9/var(--tw-text-opacity,1))}.opacity-0{opacity:0}.opacity-70{opacity:.7}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-inner,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.shadow-emerald-950\/50{--tw-shadow-color:rgba(2,44,34,.5);--tw-shadow:var(--tw-shadow-colored)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-2,.ring-4{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-amber-400{--tw-ring-opacity:1;--tw-ring-color:rgb(251 191 36/var(--tw-ring-opacity,1))}.ring-cyan-400{--tw-ring-opacity:1;--tw-ring-color:rgb(34 211 238/var(--tw-ring-opacity,1))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition-opacity{transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.hover\:bg-amber-500\/20:hover{background-color:rgba(245,158,11,.2)}.hover\:bg-amber-900\/40:hover{background-color:rgba(120,53,15,.4)}.hover\:bg-emerald-400:hover{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.hover\:bg-stone-700:hover{--tw-bg-opacity:1;background-color:rgb(68 64 60/var(--tw-bg-opacity,1))}.hover\:bg-stone-800:hover{--tw-bg-opacity:1;background-color:rgb(41 37 36/var(--tw-bg-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:.4}</style>
     
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+        }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* ZERO SCROLLING */
+            font-family: 'Inter', sans-serif;
+            background-color: #12100e;
+            color: #f8fafc;
+        }
+
+        /* Beige Oak Wooden Workbench Board Texture */
+        .beige-wood-board {
+            background-color: #d8c4a9;
+            background-image: 
+                radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.12) 100%),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(150, 110, 75, 0.08) 2px, rgba(150, 110, 75, 0.08) 5px),
+                repeating-linear-gradient(90deg, rgba(120,90,60,0.06) 0px, rgba(120,90,60,0.06) 2px, transparent 2px, transparent 60px);
+            box-shadow: inset 0 0 120px rgba(60, 40, 18, 0.45);
+        }
+
+        /* Terminal Screw styling */
+        .terminal-node {
+            transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s ease;
+        }
+        .terminal-node:hover {
+            transform: scale(1.35);
+            box-shadow: 0 0 18px #38bdf8;
+        }
+        .screw-head {
+            background: radial-gradient(circle at 30% 30%, #f1f5f9, #475569);
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.9), 1px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Boom Shake Screen FX */
+        @keyframes boomShake {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            10% { transform: translate(-12px, -12px) rotate(-2deg); }
+            20% { transform: translate(12px, 8px) rotate(2deg); }
+            30% { transform: translate(-10px, 10px) rotate(-1deg); }
+            40% { transform: translate(10px, -8px) rotate(1deg); }
+            50% { transform: translate(-6px, 4px) rotate(0deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .boom-animation {
+            animation: boomShake 0.45s ease-in-out;
+        }
+
+        @keyframes redFlash {
+            0% { background-color: rgba(225, 29, 72, 0.85); }
+            100% { background-color: transparent; }
+        }
+        .flash-red {
+            animation: redFlash 0.5s ease-out forwards;
+        }
+
+        /* Custom scrollbar for menu */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181512;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b45309;
+            border-radius: 3px;
+        }
     
-</head>
+        /* Board lanes keep hardware and flexible wiring separate. */
+        header { height:auto !important; min-height:56px; flex-wrap:wrap; gap:10px; padding:10px 16px !important; }
+        header > div { flex-wrap:wrap; }
+        #workbenchContainer, #appViewport { min-width:0; min-height:0; }
+        #wiringWorkspace { overflow:auto !important; min-height:0; }
+        #boardSurface { position:relative; min-width:100%; }
+        #wireCanvas { z-index:1; overflow:visible; }
+        #componentsLayer { z-index:2; pointer-events:none; }
+        .board-component { pointer-events:auto; height:148px; background:#24201c !important; backdrop-filter:none !important; }
+        .board-component > .terminal-row { position:absolute; bottom:-9px; left:14px; right:14px; width:auto; margin:0; }
+        .terminal-row > div { position:relative; }
+        .terminal-row span { position:absolute; bottom:23px; white-space:nowrap; color:#e7e5e4; }
+        .terminal-node { width:20px; height:20px; touch-action:manipulation; }
+        .terminal-node:focus-visible { outline:3px solid #38bdf8; outline-offset:3px; }
+        #boardTools { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:10px 16px; background:#24201c; border-bottom:1px solid #57534e; flex-shrink:0; }
+        #boardTools[hidden] { display:none; }
+        #wireHelp { flex:1; min-width:180px; font-size:11px; color:#d6d3d1; line-height:1.6; }
+        #wireHelp strong { color:#fbbf24; }
+        .wire-actions { display:flex; gap:6px; flex-wrap:wrap; }
+        .wire-actions button { background:#44403c; border:1px solid #78716c; border-radius:6px; padding:6px 10px; font-size:11px; }
+        .wire-actions button:disabled { opacity:.35; cursor:default; }
+        #multimeterWidget { position:static !important; width:145px; padding:6px 10px; cursor:default; flex-shrink:0; }
+        #multimeterWidget > div { margin:0; }
+        #multimeterWidget > div:last-child { display:none; }
+        .wire-hit { pointer-events:stroke; cursor:crosshair; touch-action:none; }
+        .wire-pin { pointer-events:all; cursor:grab; touch-action:none; }
+        .wire-pin:active { cursor:grabbing; }
+        .wire-pin:focus { stroke:#fff; stroke-width:4; }
+        @media(max-width:760px) { aside { width:160px !important; } header h1 { display:none !important; } }
+        @media(max-width:520px) { #appViewport { flex-direction:column; } aside { width:100% !important; max-height:130px; } aside > div:last-child { display:none; } #levelMenuList { display:flex; gap:6px; } #levelMenuList > div { display:none; } #levelMenuList > button { min-width:180px; } }
+
+    #wiringStatusPanel { flex-shrink:0; padding:10px 16px; background:#1c1917; border-bottom:1px solid #57534e; max-height:30vh; overflow:auto; }
+#wiringStatusPanel[hidden], #nextLevelBtn[hidden] { display:none; }
+#wiringStatus { font-size:13px; font-weight:800; }
+#wiringStatus[data-state="correct"] { color:#6ee7b7; }
+#wiringStatus[data-state="fault"] { color:#fda4af; }
+#wiringStatus[data-state="pending"] { color:#fcd34d; }
+#wiringDetails { font-size:11px; line-height:1.5; margin:4px 0; color:#e7e5e4; }
+#modelNotes { font-size:11px; line-height:1.6; color:#d6d3d1; }
+#modelNotes summary { cursor:pointer; color:#7dd3fc; }
+#modelNotes p { margin:8px 0; max-width:1000px; }
+#modelNotes a { text-decoration:underline; color:#7dd3fc; }
+.component-reading { font:9px/1.3 'Fira Code',monospace; color:#bae6fd; position:absolute; left:4px; right:4px; bottom:31px; text-align:center; }
+.board-component { padding-bottom:32px !important; }
+#modalBody { white-space:pre-line; }
+
+/* Phone layout: retain readable cards; swipe the board instead of shrinking terminals. */
+html,body { width:100%; height:100%; }
+body { height:100dvh !important; padding-left:env(safe-area-inset-left); padding-right:env(safe-area-inset-right); padding-bottom:env(safe-area-inset-bottom); }
+#phoneNavigation { display:none; }
+#quizViewContainer { min-height:0; overflow:auto; }
+#quizFeedback { height:auto; min-height:20px; }
+#feedbackModal > div { max-height:90dvh; overflow:auto; }
+@media (pointer:coarse) {
+    button { touch-action:manipulation; }
+    .terminal-node::before { content:''; position:absolute; inset:-12px; border-radius:50%; }
+    .terminal-node { position:relative; }
+    .terminal-node:hover { transform:none; }
+    #wiringWorkspace { overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+}
+@media (max-width:1100px) and (max-height:600px), (max-width:760px) {
+    #phoneNavigation { display:flex; align-items:center; gap:8px; flex-shrink:0; min-height:44px; padding:2px 8px; background:#0c0a09; border-bottom:1px solid #44403c; }
+    #phoneNavigation label { font-size:11px; color:#fbbf24; }
+    #phoneLevelSelect { flex:1; min-width:0; height:40px; background:#292524; color:#fafaf9; border:1px solid #78716c; border-radius:6px; font-size:12px; }
+    #phoneHelpBtn { min-height:40px; padding:0 10px; background:#292524; border:1px solid #78716c; border-radius:6px; font-size:11px; }
+    header { min-height:48px !important; padding:2px 6px !important; display:block !important; overflow-x:auto; flex-shrink:0; }
+    header > div:first-child { display:none !important; }
+    header > div:last-child { display:flex; flex-wrap:nowrap !important; gap:6px !important; width:max-content; }
+    header button { min-height:40px; white-space:nowrap; }
+    #wireColorPicker { padding:0 4px !important; gap:0 !important; }
+    #wireColorPicker > span { display:none; }
+    #wireColorPicker button { width:40px; height:40px; min-height:40px; transform:none; border-width:7px; border-color:#292524; box-shadow:none; }
+    #appViewport { flex-direction:row !important; min-height:0; }
+    aside { display:none !important; }
+    #objectivePanel { padding:5px 10px !important; min-height:30px; }
+    #taskTitle { font-size:11px; }
+    #taskDesc { display:none; }
+    #quizScoreBadge { font-size:11px; padding:2px 6px; white-space:nowrap; }
+    #wiringStatusPanel { padding:4px 10px; max-height:36px; }
+    #wiringStatus { font-size:11px; line-height:16px; }
+    #wiringDetails,#modelNotes { display:none; }
+    #boardTools { min-height:44px; padding:2px 6px; gap:6px; flex-wrap:nowrap; overflow-x:auto; }
+    #wireHelp { display:none; }
+    .wire-actions { flex-wrap:nowrap; flex-shrink:0; }
+    .wire-actions button { min-height:40px; white-space:nowrap; }
+    #multimeterWidget { width:115px; padding:2px 6px; border-width:1px; margin-left:auto; }
+    #multimeterWidget > div:first-child { display:none; }
+    #multimeterWidget #multimeterReadout { font-size:12px; line-height:16px; }
+    #multimeterMode { font-size:8px; line-height:10px; }
+    .phone-help-open #taskDesc { display:block; max-height:72px; overflow:auto; }
+    .phone-help-open #wiringStatusPanel { max-height:36vh; }
+    .phone-help-open #wiringDetails,.phone-help-open #modelNotes { display:block; }
+    .phone-help-open #wireHelp { display:block; font-size:10px; min-width:220px; }
+    #quizViewContainer { padding:6px; justify-content:flex-start; }
+    #quizCard { padding:10px !important; max-width:760px; margin:auto; }
+    #quizHeading { margin-bottom:6px; }
+    #quizHeading h3 { font-size:16px; }
+    #quizHeading p { display:none; }
+    #quizOptionsGrid { gap:6px; margin:0; }
+    #quizOptionsGrid button { min-height:44px; padding:8px; font-size:12px; line-height:1.3; }
+    #quizSymbolPanel { height:110px; padding:4px; margin:0; }
+    #quizSymbolSvg { width:100px; height:100px; }
+    #quizFeedback { font-size:11px; line-height:16px; margin-top:4px; }
+}
+@media (orientation:landscape) and (max-height:600px) and (max-width:1100px) {
+    #quizCard { display:grid; grid-template-columns:140px minmax(0,1fr); gap:6px 14px; }
+    #quizHeading { grid-column:1/-1; }
+    #quizHeading h3 { display:inline; margin-left:10px; font-size:14px; }
+    #quizSymbolPanel { grid-column:1; grid-row:2/4; height:112px; align-self:center; }
+    #quizOptionsGrid { grid-column:2; grid-row:2; }
+    #quizFeedback { grid-column:2; grid-row:3; }
+}
+
+@media (max-width:1100px) and (max-height:600px), (max-width:760px) {
+    body[data-mode="wiring"] #objectivePanel { display:none; }
+    body[data-mode="wiring"].phone-help-open #objectivePanel { display:flex; }
+    #boardTools { display:none; }
+    .phone-help-open #boardTools { display:flex; }
+    header .wire-actions { display:flex; flex-wrap:nowrap; }
+    #phoneNavigation { padding-top:max(2px,env(safe-area-inset-top)); }
+}
+
+#startScreen { position:fixed; inset:0; z-index:60; overflow:auto; padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left)); background:radial-gradient(ellipse at 20% 35%,#334b39 0%,transparent 52%),repeating-linear-gradient(90deg,#ffffff04 0 1px,transparent 1px 60px),#0d1616; color:#f3f4e9; }
+#startScreen[hidden], .menu-card[hidden] { display:none !important; }
+body:not([data-screen="game"]) > header,body:not([data-screen="game"]) > #phoneNavigation,body:not([data-screen="game"]) > #appViewport,body:not([data-screen="game"]) > #feedbackModal { display:none !important; }
+.menu-shell { min-height:100%; max-width:960px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.menu-eyebrow { color:#bbd2b9; font-size:11px; letter-spacing:2px; font-weight:800; }
+.menu-bolt { font-size:80px; line-height:1; color:#facc54; margin:14px 0; }
+.menu-intro h1 { font-size:clamp(38px,6vw,76px); line-height:.95; font-weight:900; letter-spacing:-3px; margin:0 0 20px; }
+.menu-intro em { font-style:normal; color:#facc54; }
+.menu-intro p { color:#c5d1c9; line-height:1.7; font-size:16px; }
+.menu-meta { display:block; color:#97ada3; font-size:12px; margin-top:22px; }
+.menu-card { padding:28px; border:1px solid #536b5d; background:#172522ee; border-radius:20px; box-shadow:0 20px 65px #0004; display:flex; flex-direction:column; gap:12px; }
+.menu-card h2 { font-size:24px; font-weight:800; margin:0 0 8px; }
+.menu-card button { min-height:46px; border:1px solid #52675c; background:#263b32; color:#edf5ee; border-radius:10px; padding:10px 16px; font-size:15px; font-weight:700; cursor:pointer; }
+.menu-card button:hover { background:#385443; }
+.menu-card button:focus-visible { outline:3px solid #facc54; outline-offset:3px; }
+.menu-card .menu-primary { background:#facc54; color:#172522; border-color:#facc54; }
+.menu-card .menu-primary:hover { background:#ffdf85; }
+.menu-card p { font-size:12px; line-height:1.6; color:#c5d1c9; margin:0; }
+.menu-card label { font-size:14px; display:flex; justify-content:space-between; }
+#masterVolume { width:100%; min-height:34px; accent-color:#facc54; }
+.sound-options { display:flex; gap:8px; }.sound-options button { flex:1; font-size:12px; }
+@media(max-height:600px) and (orientation:landscape) { .menu-shell { gap:24px; grid-template-columns:1fr 1.1fr; } .menu-bolt { font-size:40px; margin:4px 0; } .menu-intro h1 {font-size:40px;margin-bottom:12px;} .menu-intro p{font-size:12px;} .menu-meta{margin-top:8px;font-size:10px;} .menu-card{padding:16px;gap:8px;} .menu-card h2{font-size:20px;margin-bottom:2px;} .menu-card button{min-height:44px;padding:8px 12px;} }
+@media(max-width:520px) and (orientation:portrait) { .menu-shell { grid-template-columns:1fr; gap:24px; }.menu-intro {text-align:center;}.menu-intro h1 {font-size:44px;}.menu-bolt{font-size:40px;}.menu-intro p{display:none;} }
+/* Responsive viewport, safe areas and accessible overflow. */
+html { height:100%; -webkit-text-size-adjust:100%; }
+body { height:100vh !important; height:100dvh !important; padding-top:env(safe-area-inset-top,0px); }
+header { flex-shrink:0; max-height:32%; overflow:auto; }
+header > div { min-width:0; }
+#appViewport { flex:1 1 0%; }
+#workbenchContainer { min-width:0; }
+#wiringWorkspace { flex:1 1 0%; height:auto; scrollbar-gutter:stable; }
+#quizViewContainer { flex:1 1 0%; }
+#quizCard { flex-shrink:0; }
+#objectivePanel { gap:10px; }
+#objectivePanel > div:first-child { min-width:0; }
+#quizScoreBadge { flex-shrink:0; }
+#feedbackModal { padding:16px; padding-top:max(16px,env(safe-area-inset-top)); padding-bottom:max(16px,env(safe-area-inset-bottom)); }
+#feedbackModal > div { max-height:100%; }
+#feedbackModal button, #levelMenuList button { min-height:44px; }
+.menu-shell { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(20px,5vw,64px); }
+.menu-card { min-width:0; }
+button,select { touch-action:manipulation; }
+@media(max-width:760px) and (orientation:portrait) {
+ .menu-shell { grid-template-columns:minmax(0,1fr); gap:20px; max-width:480px; }
+ .menu-intro { text-align:center; }
+ .menu-intro h1 { font-size:clamp(36px,9vw,54px); }
+ .menu-bolt { font-size:40px; margin:8px 0; }
+ .menu-intro p { display:none; }
+ .menu-card { padding:20px; }
+}
+@media (max-width:1100px) and (max-height:600px), (max-width:760px) {
+ #phoneNavigation { padding-top:2px; }
+ #phoneLevelSelect { font-size:16px; height:44px; }
+ #phoneHelpBtn { min-height:44px; }
+ header { max-height:none; scrollbar-width:thin; }
+ header > div:last-child { padding-bottom:2px; }
+ header button, .wire-actions button { min-height:44px; flex-shrink:0; }
+ #wireColorPicker button { width:44px; height:44px; }
+ #wireColorPicker button[aria-pressed="true"] { outline:2px solid #fbbf24; outline-offset:-3px; }
+ #quizOptionsGrid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ #quizOptionsGrid button { overflow-wrap:anywhere; }
+ .phone-help-open #objectivePanel { max-height:18vh; overflow:auto; flex-shrink:0; }
+ .phone-help-open #wiringStatusPanel { max-height:20vh; }
+ .phone-help-open #boardTools { max-height:72px; }
+}
+@media (max-height:450px) {
+ #quizCard { margin:0 auto; }
+ .phone-help-open #wireHelp { display:none; }
+}
+@media (pointer:coarse) {
+ .terminal-node { -webkit-tap-highlight-color:transparent; }
+ .board-component button { min-height:44px; min-width:44px; }
+}
+
+/* Phone controls stay reachable; advanced controls expand only on request. */
+#phoneToolsBtn { display:none; }
+@media (max-width:1100px) and (max-height:600px), (max-width:760px) {
+ header { overflow-y:auto; overflow-x:hidden; max-height:32vh; max-height:32dvh; }
+ header > div:last-child { display:grid !important; grid-template-columns:auto minmax(0,1fr) auto; width:100%; gap:4px !important; }
+ header > div:last-child > button:first-child { grid-column:1; grid-row:1; }
+ #wireColorPicker { grid-column:2; grid-row:1; justify-content:center; padding:0 !important; min-width:0; }
+ #wireColorPicker button { width:36px; height:44px; min-width:0; border-width:5px; }
+ #phoneToolsBtn { display:block; grid-column:3; grid-row:1; border:1px solid #78716c; border-radius:6px; padding:0 8px; background:#292524; }
+ #verifyCircuitBtn { grid-column:1/-1; justify-content:center; }
+ #toggleMusicBtn,#toggleSoundBtn,header button[onclick="resetCurrentLevelWires()"],header .wire-actions { display:none; }
+ .phone-tools-open #toggleMusicBtn,.phone-tools-open #toggleSoundBtn,.phone-tools-open header button[onclick="resetCurrentLevelWires()"] { display:block; grid-column:1/-1; }
+ .phone-tools-open header .wire-actions { display:flex; grid-column:1/-1; flex-wrap:wrap; }
+ body[data-mode="quiz"] #verifyCircuitBtn { display:none; }
+ #phoneNavigation { min-height:48px; }
+ #phoneNavigation label { display:none; }
+ #phoneLevelSelect { width:0; }
+ #wiringStatusPanel { min-height:24px; }
+ #wiringWorkspace { touch-action:pan-x pan-y; -webkit-overflow-scrolling:touch; }
+ .wire-hit { touch-action:pan-x pan-y; }
+ .board-component { height:164px; padding-bottom:56px !important; }
+ .board-component > .terminal-row { bottom:-22px; }
+ .terminal-node { width:44px; height:44px; min-width:44px; min-height:44px; transform:none !important; }
+ .terminal-node::before { content:none; }
+ .terminal-row span { bottom:48px; }
+ .component-reading { bottom:52px; }
+}
+@media(max-width:360px) { #wireColorPicker button { width:32px; } }
+
+</style>
+<style>
+#quizScoreBadge,#wireColorPicker{display:none!important}
+#liveBar{flex-shrink:0;background:#171717;color:#fafafa;padding:8px 12px;border-bottom:1px solid #57534e;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#liveBar>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}#liveBar strong{font-family:monospace;color:#6ee7b7;font-size:16px}#liveState{font-size:12px}
+#liveBar button,.result-card button,.result-card select{min-height:44px;padding:8px 12px;border:1px solid #78716c;border-radius:8px;background:#292524;color:#fafafa}
+#wireLegend{background:#292524;color:#fafafa;padding:5px 12px;font-size:12px;flex-shrink:0}#wireLegend small{font-size:11px}
+body[data-screen="menu"] #liveBar,body[data-screen="menu"] #wireLegend,body[data-mode="quiz"] #liveBar button{display:none}
+#lessonResult[hidden]{display:none}#lessonResult{position:fixed;inset:0;z-index:100;background:#000c;display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto}
+.result-card{width:min(100%,460px);max-height:90dvh;overflow:auto;background:#1c1917;color:white;padding:24px;border:1px solid #78716c;border-radius:16px;display:flex;flex-direction:column;gap:12px}.result-card h2{font-size:24px;font-weight:bold}.result-card select{width:100%}.result-card button:disabled{opacity:.5}#finalScore{font-size:22px;color:#6ee7b7;font-weight:bold}
+.flow-active{stroke-dasharray:12 4;animation:wire-flow .7s linear infinite}@keyframes wire-flow{to{stroke-dashoffset:-16}}@media(prefers-reduced-motion:reduce){.flow-active{animation:none}}
+@media(max-width:760px){#liveBar{padding:6px 10px;gap:4px}#liveBar>div{gap:8px}#wireLegend{font-size:11px}#wireLegend small{display:none}#liveBar button{min-height:44px;font-size:12px}.result-card{padding:18px}}
+</style><style>
+#celebrationOverlay[hidden],#correctToast[hidden]{display:none!important}
+#celebrationOverlay{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at center,#164e63f5,#0c0a09fa);overflow:hidden}
+.celebration-card{position:relative;text-align:center;color:#fff;max-width:440px;animation:celebrate-in .45s ease-out}.celebration-star{color:#fbbf24;font-size:90px;text-shadow:0 0 45px #fbbf2488}.celebration-card h2{font-size:clamp(28px,7vw,44px);font-weight:900}.celebration-card p{margin:12px 0;font-size:16px}.celebration-card button{min-height:48px;margin-top:14px;padding:12px 20px;background:#fbbf24;color:#171717;border-radius:12px;font-weight:800}
+#celebrationParticles{position:absolute;inset:0;pointer-events:none}#celebrationParticles i{position:absolute;left:var(--x);top:-24px;width:10px;height:17px;border-radius:2px;animation:celebrate-fall 2.5s var(--delay) ease-in both}
+#correctToast{position:fixed;left:50%;top:18%;transform:translateX(-50%);z-index:110;pointer-events:none;max-width:90vw;width:max-content;padding:14px 22px;border-radius:14px;background:#065f46;color:#fff;font-size:18px;font-weight:800;box-shadow:0 6px 28px #0005}
+@keyframes celebrate-fall{to{transform:translate(var(--drift),110vh) rotate(620deg)}}@keyframes celebrate-in{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@media(prefers-reduced-motion:reduce){.celebration-card,#celebrationParticles i{animation:none}}
+</style><style>
+#savedLevelBar{flex-shrink:0;background:#172b25;color:#d1fae5;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px}#savedLevelBar button,#quizNextQuestion{background:#fbbf24;color:#171717;border-radius:8px;min-height:44px;padding:8px 12px;font-weight:bold;flex-shrink:0}body[data-screen="menu"] #savedLevelBar{display:none}.completed-board .wire-hit,.completed-board .wire-pin{pointer-events:none}.saved-answer{grid-column:1/-1;text-align:left;padding:10px;background:#292524;border-radius:8px;color:#fafafa;font-size:13px}#quizCard{max-height:100%;overflow:auto}#quizFeedback{height:auto;min-height:20px}#quizNextQuestion{margin:8px 0}#savedLevelBar [hidden],#quizNextQuestion[hidden]{display:none!important}
+</style><style>
+#panelControls{display:flex;flex-shrink:0;gap:8px;align-items:center;padding:4px 10px;background:#1c1917;border-bottom:1px solid #57534e}
+#panelControls button{min-height:44px;padding:8px 14px;border:1px solid #78716c;border-radius:8px;background:#292524;color:#fef3c7;font-size:13px;font-weight:700;touch-action:manipulation}
+#panelControls button:focus-visible{outline:3px solid #38bdf8;outline-offset:2px}
+body[data-screen="menu"] #panelControls{display:none}
+#levelSidebar{width:256px;max-width:256px;overflow:hidden;transition:width .22s ease,max-width .22s ease;min-width:0}
+body.levels-panel-hidden #levelSidebar{width:0!important;max-width:0!important;border:0;visibility:hidden}
+body.levels-panel-hidden #phoneNavigation{display:none!important}
+#phoneHelpBtn{display:none!important}
+body.instructions-panel-hidden #objectivePanel,body.instructions-panel-hidden #wiringDetails,body.instructions-panel-hidden #modelNotes,body.instructions-panel-hidden #wireHelp,body.instructions-panel-hidden #wireLegend{display:none!important}
+body.instructions-panel-hidden #wiringStatusPanel{padding:4px 10px;max-height:60px;overflow:auto}
+@media(max-width:760px),(max-width:1100px) and (max-height:600px){#panelControls{gap:6px;padding:3px 6px}#panelControls button{flex:1;padding:6px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){#levelSidebar{transition:none}}
+</style><style>
+body.instructions-panel-hidden #multimeterWidget,body.instructions-panel-hidden .wire-actions{display:none!important}
+#certificateDialog[hidden],#certificateDownload[hidden],#certificatePreview[hidden],#certificateToolbarButton[hidden],#certificateReflectionButton[hidden],#certificateCelebrationButton[hidden]{display:none!important}
+#panelControls{flex-wrap:wrap}#certificateDialog{position:fixed;inset:0;z-index:150;background:#000d;display:grid;place-items:center;padding:16px;overflow:auto}.certificate-card{width:min(100%,760px);max-height:94dvh;overflow:auto;background:#1c1917;color:white;border-radius:16px;padding:24px;display:grid;gap:14px}.certificate-card h2{font-size:24px;font-weight:bold}.certificate-card form{display:grid;gap:12px}.certificate-card input{width:100%;padding:12px;color:#171717;background:white;border-radius:8px;font-size:16px}.certificate-card button,#certificateDownload{min-height:44px;background:#fbbf24;color:#171717;font-weight:bold;padding:12px;border-radius:8px;text-align:center}.certificate-card p{font-size:13px;color:#d6d3d1}#certificatePreview{width:100%;height:auto}#certificateCelebrationButton{display:block;margin:12px auto}
+</style><style>
+#postDialog[hidden],#postIntro[hidden],#postQuestion[hidden],#postSummary[hidden],#postToolbar[hidden]{display:none!important}
+#postDialog{position:fixed;inset:0;z-index:160;background:#000d;display:grid;place-items:center;padding:14px;overflow:auto}.post-card{width:min(100%,760px);max-height:94dvh;overflow:auto;background:#1c1917;color:#fafafa;border:1px solid #78716c;border-radius:16px;padding:24px}.post-card h2{font-size:24px;font-weight:800;margin-bottom:14px}.post-card h3{font-size:20px;font-weight:700;margin:12px 0}.post-card p{margin:12px 0;line-height:1.5}.post-card button{min-height:44px;padding:12px;border:1px solid #78716c;border-radius:8px;background:#292524;color:#fafafa;margin:4px 0}.post-card button:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}.post-card button:disabled{opacity:.65}.post-card .post-chosen{border:2px solid #fbbf24;background:#453819}#postOptions{display:grid;gap:8px;margin-top:14px}#postOptions button{text-align:left}.post-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}#postDiagram{padding:14px;background:#0c0a09;border-radius:8px;font-family:monospace;line-height:1.7;overflow-wrap:anywhere}#postFeedback{color:#fde68a}#postScore{font-size:24px;font-weight:800;color:#6ee7b7}.post-note{font-size:12px;color:#d6d3d1}@media(max-width:600px){.post-card{padding:16px}.post-card h2{font-size:21px}}
+</style><style>
+#wiringWorkspace{overflow:hidden!important;scrollbar-gutter:auto;position:relative;min-height:80px}
+#boardSurface{position:absolute;min-width:0!important;transform-origin:top left}
+@media(max-width:760px),(max-width:1100px) and (max-height:600px){
+ #panelControls{padding:2px 6px}#liveBar{padding:3px 8px}#liveBar>div{gap:6px}#savedLevelBar{padding:4px 8px;font-size:11px}body[data-mode="wiring"] #appViewport{min-height:140px}
+}
+@media(max-height:500px) and (orientation:landscape){#liveBar{flex-wrap:nowrap}#panelControls button{min-height:36px}#savedLevelBar{padding:2px 8px}#phoneNavigation{min-height:40px}#phoneLevelSelect{height:36px}header #verifyCircuitBtn{grid-column:2!important;grid-row:1}}
+</style><style id="deviceFitStyles">
+/* Unified visible-viewport layout for phones, tablets and laptops. */
+[hidden]{display:none!important}
+.wire-hit,.wire-pin{touch-action:none!important}
+html,body{width:100%!important;height:100%!important;min-height:0!important;overflow:hidden!important;overscroll-behavior:none}
+body{position:fixed;inset:0;height:var(--app-vh,100dvh)!important;max-height:var(--app-vh,100dvh)!important;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);display:flex;flex-direction:column}
+#chromeViewport{position:relative;flex:0 0 auto;min-height:0;overflow:hidden;width:100%}
+#chromeContent{display:flex;flex-direction:column;transform-origin:top left;width:100%;position:relative}
+body[data-screen="menu"] #chromeViewport{display:none!important}
+#chromeContent header{display:flex!important;min-height:0!important;height:auto!important;max-height:none!important;overflow:visible!important;flex-wrap:wrap;padding:4px 8px!important;gap:6px!important}
+#chromeContent header>div:last-child{display:flex!important;width:auto!important;flex:1;justify-content:flex-end;flex-wrap:wrap!important;gap:5px!important;padding:0}
+#chromeContent header button{min-height:36px;padding:5px 8px;font-size:11px;white-space:normal}
+#chromeContent #phoneToolsBtn{display:none!important}
+#chromeContent #toggleMusicBtn,#chromeContent #toggleSoundBtn,#chromeContent header button[onclick="resetCurrentLevelWires()"]{display:block!important}
+#chromeContent #phoneNavigation{display:flex!important;min-height:0;padding:3px 8px;gap:6px}
+#chromeContent #phoneLevelSelect{height:36px;flex:1;width:auto;min-width:0;font-size:16px}
+#chromeContent #phoneNavigation label{display:block;font-size:11px}
+#chromeContent #panelControls{display:flex;flex-wrap:wrap;gap:4px;padding:3px 6px}
+#chromeContent #panelControls button{flex:1;min-height:34px;padding:5px 8px;font-size:11px;line-height:1.2}
+#chromeContent #liveBar{padding:3px 8px;gap:4px;flex-wrap:nowrap}
+#chromeContent #liveBar>div{gap:7px;min-width:0;flex-wrap:wrap}
+#chromeContent #liveBar strong{font-size:14px}
+#chromeContent #liveState{font-size:10px}
+#chromeContent #liveBar button{min-height:34px;padding:4px 8px;font-size:11px}
+#chromeContent #savedLevelBar{padding:3px 8px;font-size:11px;gap:4px}
+#chromeContent #savedLevelBar button{min-height:34px;padding:4px 8px;font-size:11px}
+#chromeContent #wireLegend{padding:3px 8px;font-size:10px;line-height:1.3}
+#chromeContent #wireLegend small{display:none}
+#chromeContent #objectivePanel{display:flex;padding:4px 8px!important;min-height:0;max-height:none;overflow:visible}
+#chromeContent #taskTitle{font-size:12px;line-height:1.3}
+#chromeContent #taskDesc{display:block;max-height:none;overflow:visible;font-size:11px;line-height:1.35}
+#chromeContent #wiringStatusPanel{padding:3px 8px;max-height:none;min-height:0;overflow:visible}
+#chromeContent #wiringStatus{font-size:11px;line-height:1.3}
+#chromeContent #wiringDetails{font-size:10px;line-height:1.3;margin:2px 0}
+#chromeContent #modelNotes{display:block;font-size:10px;line-height:1.3}
+#chromeContent #modelNotes summary{cursor:pointer}
+#chromeContent #boardTools{display:flex;max-height:none;min-height:0;overflow:visible;padding:3px 8px;gap:5px;flex-wrap:wrap}
+#chromeContent #wireHelp{font-size:10px;line-height:1.3;min-width:150px}
+#chromeContent .wire-actions{display:flex;flex-wrap:wrap;gap:4px}
+#chromeContent .wire-actions button{min-height:32px;padding:4px 6px;font-size:10px}
+#chromeContent #multimeterWidget{min-width:95px;width:110px;padding:3px 5px}
+body.instructions-panel-hidden #chromeContent #boardTools{display:none!important}
+body.levels-panel-hidden #chromeContent #phoneNavigation{display:none!important}
+#appViewport,#workbenchContainer{flex:1 1 0%!important;min-width:0!important;min-height:0!important;overflow:hidden!important}
+#levelSidebar{display:none!important}
+#wiringWorkspace{flex:1 1 0%!important;min-width:0!important;min-height:0!important;overflow:hidden!important;touch-action:manipulation;scrollbar-gutter:auto}
+#boardSurface{min-height:0;transform-origin:top left}
+.board-component{height:132px!important;width:140px!important;padding:8px 8px 40px!important}
+.board-component>.terminal-row{bottom:-18px!important;left:10px!important;right:10px!important}
+.terminal-node{width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;transform:none!important}
+.terminal-row span{bottom:42px!important;font-size:9px}
+.component-reading{bottom:38px!important;font-size:9px}
+.board-component button[id^="sw_btn_"]{min-height:32px!important;height:32px;font-size:11px}
+#quizViewContainer{position:relative;min-height:0!important;padding:8px;overflow:hidden!important;display:flex;align-items:center;justify-content:center}
+#quizViewContainer.hidden{display:none!important}
+#quizCard{max-height:none!important;flex-shrink:0;transform-origin:center center;overflow:visible!important;padding:12px!important;width:min(100%,540px)}
+#quizHeading{margin-bottom:6px}#quizHeading h3{font-size:17px}#quizHeading p{display:block;font-size:11px}
+#quizSymbolPanel{height:100px;margin:0 0 8px;padding:4px}#quizSymbolSvg{width:90px;height:90px}
+#quizOptionsGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:0}
+#quizOptionsGrid button{min-height:40px;padding:7px;font-size:12px;line-height:1.3;overflow-wrap:anywhere}
+#quizFeedback{min-height:18px;font-size:11px;line-height:1.3;margin-top:5px}
+#quizNextQuestion{min-height:36px;padding:6px 10px;margin:6px 0}
+.saved-answer{font-size:12px;line-height:1.4;padding:9px}
+#quizReviewPager{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:8px;font-size:12px}
+#quizReviewPager button{min-height:36px;background:#44403c;color:white;border-radius:6px;padding:6px 10px}
+#startScreen,#lessonResult,#certificateDialog,#postDialog,#feedbackModal,#celebrationOverlay,#deviceHelpDialog{position:fixed;inset:0;overflow:hidden!important;padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));align-items:center;justify-content:center}
+#startScreen{display:grid;place-items:center}
+.menu-shell{min-height:0!important;width:min(100%,960px);max-width:960px;transform-origin:center center;gap:24px}
+.menu-intro h1{font-size:clamp(32px,6vw,64px);margin-bottom:12px}.menu-bolt{font-size:42px;margin:6px 0}.menu-meta{margin-top:8px}
+.menu-card{padding:18px;gap:9px}.menu-card button{min-height:40px;padding:8px 12px}
+.result-card,.certificate-card,.post-card,#feedbackModal>div,.celebration-card,.device-help-card{max-height:none!important;overflow:visible!important;transform-origin:center center;flex-shrink:0}
+.result-card{gap:8px;padding:16px}.result-card h2,.certificate-card h2,.post-card h2{font-size:21px}
+.result-card button,.result-card select{min-height:38px;padding:7px;font-size:13px}
+.certificate-card{gap:9px;padding:16px;max-width:680px}.certificate-card form{gap:7px}
+#certificateName{font-size:16px}.certificate-card button,#certificateDownload{min-height:38px;padding:8px}
+#certificatePreview{height:min(28dvh,220px);object-fit:contain;width:100%}
+.post-card{padding:15px}.post-card h2{margin-bottom:8px}.post-card h3{font-size:17px;margin:7px 0}.post-card p{font-size:13px;line-height:1.35;margin:7px 0}
+#postOptions{gap:5px;margin-top:8px}#postOptions button,.post-card button{min-height:38px;font-size:13px;padding:8px;margin:2px 0}
+#postDiagram{padding:8px;font-size:12px;line-height:1.35}.post-note{font-size:11px!important}
+#postReview p{font-size:12px}.celebration-star{font-size:60px}.celebration-card p{margin:8px 0}
+#deviceHelpDialog[hidden]{display:none!important}#deviceHelpDialog{z-index:170;background:#000d;display:flex}
+.device-help-card{width:min(100%,580px);padding:20px;background:#1c1917;border:1px solid #78716c;border-radius:14px;color:#fafafa}
+.device-help-card h2{font-size:21px;font-weight:bold;margin-bottom:10px}.device-help-card p{line-height:1.5;font-size:14px;margin:8px 0}
+.device-help-actions{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:12px}.device-help-actions button{min-height:40px;padding:8px 12px;border-radius:8px;background:#44403c}
+@media(max-width:760px){#chromeContent header>div:first-child{display:none!important}.menu-shell{grid-template-columns:minmax(0,1fr);max-width:420px;gap:14px}.menu-intro{text-align:center}.menu-intro p,.menu-meta{display:none}.menu-intro h1{font-size:36px;margin-bottom:0}.menu-bolt{font-size:28px;margin:0 0 5px}.menu-card h2{font-size:20px}}
+@media(max-height:500px) and (orientation:landscape){.menu-shell{grid-template-columns:minmax(0,1fr) minmax(0,1fr);max-width:850px;gap:16px}.menu-intro h1{font-size:36px}#chromeContent header{padding:2px 6px!important}#chromeContent header button{min-height:30px}#chromeContent #phoneLevelSelect{height:30px}#chromeContent #panelControls button,#chromeContent #liveBar button,#chromeContent #savedLevelBar button{min-height:30px}#chromeContent #liveBar strong{font-size:12px}#quizCard{display:grid;grid-template-columns:110px minmax(0,1fr);gap:5px 12px;width:min(100%,740px)}#quizHeading{grid-column:1/-1}#quizSymbolPanel{grid-column:1;grid-row:2/5;height:100px;margin:0;align-self:center}#quizOptionsGrid,#quizFeedback,#quizNextQuestion,#quizReviewPager{grid-column:2}.saved-answer{padding:6px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){#chromeContent,.menu-shell,.result-card,.certificate-card,.post-card{transition:none!important}}
+</style><style id="visibleLevelStyles">
+/* Keep the active lesson visible independently of collapsible panels. */
+#currentLessonBar{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#4a3415;color:#fff7d6;border-bottom:1px solid #a88439;line-height:1.3;flex-shrink:0}
+#currentLessonTitle{font-size:13px;font-weight:800;overflow-wrap:anywhere;min-width:0;flex:1}
+#currentLessonState{font-size:10px;font-weight:700;white-space:nowrap}
+#chromeContent #phoneNavigation{display:block!important;padding:4px 8px}
+#phoneNavigation>label,#phoneLevelSelect{display:none!important}
+#levelChoiceButtons{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;width:100%}
+#levelChoiceButtons button{display:flex;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:34px;border:1px solid #78716c;border-radius:7px;background:#292524;color:#fafafa;font-size:12px;font-weight:700;touch-action:manipulation}
+#levelChoiceButtons button[aria-current="step"]{background:#fbbf24;color:#171717;border:2px solid #fff0ad;box-shadow:inset 0 0 0 1px #92400e;font-weight:900}
+#levelChoiceButtons button[data-complete="true"]:not([aria-current="step"]){background:#16392d;color:#bbf7d0;border-color:#4ade80}
+#levelChoiceButtons button:focus-visible{outline:3px solid #7dd3fc;outline-offset:1px}
+body[data-screen="menu"] #currentLessonBar{display:none!important}
+body.levels-panel-hidden #chromeContent #phoneNavigation{display:none!important}
+@media(max-width:600px){#levelChoiceButtons{grid-template-columns:repeat(5,minmax(0,1fr))}#levelChoiceButtons button{min-height:34px}#currentLessonTitle{font-size:12px}}
+</style></head>
 <body data-screen="menu" class="flex flex-col h-screen w-screen overflow-hidden bg-stone-950">
 
     <!-- Top Header & Workspace Controls -->
@@ -187,7 +634,2512 @@
         </div>
     </div>
 
-    <script src="js/script-1.js"></script>
-<script src="js/script-2.js"></script>
-<script id="deviceFitRuntime" src="js/script-3.js"></script><script id="visibleLevelRuntime" src="js/script-4.js"></script></body>
+    <script>
+
+        let gamePlaying=false;
+        let gameStarted=false;
+        let masterVolume=0.6;
+        function saveAudioSettings(){try{localStorage.setItem('circuitCraft.audio',JSON.stringify({volume:masterVolume,music:isMusicEnabled,sfx:isSFXEnabled}));}catch(error){}}
+        function restoreAudioSettings(){
+            try{const saved=JSON.parse(localStorage.getItem('circuitCraft.audio')||'null');if(saved){if(Number.isFinite(saved.volume))masterVolume=Math.max(0,Math.min(1,saved.volume));if(typeof saved.music==='boolean')isMusicEnabled=saved.music;if(typeof saved.sfx==='boolean')isSFXEnabled=saved.sfx;}}catch(error){}
+            syncAudioControls();
+        }
+        function syncAudioControls(){
+            document.getElementById('masterVolume').value=Math.round(masterVolume*100);
+            document.getElementById('volumeValue').textContent=Math.round(masterVolume*100)+'%';
+            document.getElementById('toggleMusicBtn').textContent='🎵 Music: '+(isMusicEnabled?'ON':'OFF');
+            document.getElementById('toggleSoundBtn').textContent='🔊 SFX: '+(isSFXEnabled?'ON':'OFF');
+            document.getElementById('settingsMusicBtn').textContent='Music: '+(isMusicEnabled?'ON':'OFF');
+            document.getElementById('settingsSfxBtn').textContent='Effects: '+(isSFXEnabled?'ON':'OFF');
+            if(AudioEngine.master)AudioEngine.master.gain.setTargetAtTime(masterVolume,AudioEngine.ctx.currentTime,.02);
+            if(AudioEngine.sfxBus)AudioEngine.sfxBus.gain.setTargetAtTime(isSFXEnabled?1:0,AudioEngine.ctx.currentTime,.02);
+        }
+        function setGameVolume(value){masterVolume=Math.max(0,Math.min(1,Number(value)/100));syncAudioControls();saveAudioSettings();}
+        function pauseGame(){
+            cancelCelebration();
+            gamePlaying=false;cancelAutoAdvance();completionAnnounced=false;
+            if(quizTimer!==null){clearTimeout(quizTimer);quizTimer=null;if(currentLevelIndex===0){if(quizAnswered)quizCurrentQuestion=Math.min(quizCurrentQuestion+1,symbolQuizData.length);quizAnswered=false;if(quizCurrentQuestion>=symbolQuizData.length){finalQuizPoints=Math.max(finalQuizPoints,quizScore);completedLevels.add(0);}}}
+            AudioEngine.stopBackgroundMusic();
+            if(AudioEngine.ctx)AudioEngine.ctx.suspend().catch(()=>{});
+            document.getElementById('feedbackModal').classList.add('hidden');
+        }
+        function menuPanel(id){
+            document.body.dataset.screen='menu';document.getElementById('startScreen').hidden=false;
+            for(const name of ['mainMenuPanel','settingsPanel'])document.getElementById(name).hidden=name!==id;
+            document.getElementById(id).querySelector('button')?.focus();
+        }
+        function showMainMenu(){pauseGame();menuPanel('mainMenuPanel');document.getElementById('playGameBtn').textContent=gameStarted?'▶ Resume game':'▶ Play';}
+        function openGameSettings(){pauseGame();menuPanel('settingsPanel');syncAudioControls();}
+        function startGame(){
+            gamePlaying=true;gameStarted=true;document.body.dataset.screen='game';document.getElementById('startScreen').hidden=true;
+            try{AudioEngine.init();AudioEngine.ctx.resume().catch(()=>{});AudioEngine.startBackgroundMusic();}catch(error){}
+            if(currentLevelIndex===0){renderQuizQuestion();}
+            else {layoutBoard();updateCircuitPhysics();}
+        }
+        function previewGameSound(){try{AudioEngine.init();AudioEngine.ctx.resume().then(()=>AudioEngine.playClick()).catch(()=>{});}catch(error){}}
+
+        let currentLevelIndex = 0;
+        let isMusicEnabled = true;
+        let isSFXEnabled = true;
+        let selectedWireColor = 'red';
+        let quizScore = 0;
+        let quizCurrentQuestion = 0;
+        let activeWireStart = null;
+        let wires = [];
+        let componentStates = {};
+
+        // 10 Core Schematic Symbols
+        const symbolQuizData = [
+    {
+        "id": "battery",
+        "name": "DC Power Source / Battery",
+        "svg": "<path d=\"M 20 50 L 40 50 M 60 50 L 80 50 M 40 30 L 40 70 M 48 40 L 48 60 M 54 30 L 54 70 M 60 40 L 60 60\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/><text x=\"26\" y=\"24\" fill=\"#ef4444\" font-size=\"14\" font-weight=\"bold\">+</text><text x=\"64\" y=\"24\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"bold\">-</text>",
+        "options": [
+            "DC Power Source / Battery",
+            "AC Generator",
+            "Capacitor",
+            "Resistor"
+        ]
+    },
+    {
+        "id": "diode",
+        "name": "Diode",
+        "svg": "<path d=\"M10 50 H35 M65 50 H90 M35 28 L65 50 L35 72 Z M65 25 V75\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\"/>",
+        "options": [
+            "Diode",
+            "Fixed Resistor",
+            "Non-polarized Capacitor",
+            "SPST Toggle Switch"
+        ]
+    },
+    {
+        "id": "switch",
+        "name": "SPST Toggle Switch",
+        "svg": "<path d=\"M 10 50 L 30 50 M 70 50 L 90 50\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"30\" cy=\"50\" r=\"4\" fill=\"#38bdf8\"/><circle cx=\"70\" cy=\"50\" r=\"4\" fill=\"#38bdf8\"/><line x1=\"30\" y1=\"50\" x2=\"65\" y2=\"30\" stroke=\"#f59e0b\" stroke-width=\"4\" stroke-linecap=\"round\"/>",
+        "options": [
+            "Push Button",
+            "Potentiometer",
+            "SPST Toggle Switch",
+            "Diode"
+        ]
+    },
+    {
+        "id": "lamp",
+        "name": "Incandescent Lamp / Bulb",
+        "svg": "<path d=\"M 10 50 L 30 50 M 70 50 L 90 50\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"4\"/><path d=\"M 36 36 L 64 64 M 36 64 L 64 36\" stroke=\"#f59e0b\" stroke-width=\"4\"/>",
+        "options": [
+            "Voltmeter",
+            "Incandescent Lamp / Bulb",
+            "Ammeter",
+            "Electric Motor"
+        ]
+    },
+    {
+        "id": "ground",
+        "name": "Ground / Common Return",
+        "svg": "<path d=\"M 50 20 L 50 50 M 20 50 L 80 50 M 32 62 L 68 62 M 44 74 L 56 74\" stroke=\"#f59e0b\" stroke-width=\"4\" stroke-linecap=\"round\"/>",
+        "options": [
+            "Ground / Common Return",
+            "Antenna",
+            "Shielding",
+            "Negative Pole"
+        ]
+    },
+    {
+        "id": "resistor",
+        "name": "Fixed Resistor",
+        "svg": "<path d=\"M10 50 H25 L30 35 L40 65 L50 35 L60 65 L70 35 L75 50 H90\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\" stroke-linejoin=\"round\"/>",
+        "options": [
+            "Fixed Resistor",
+            "Diode",
+            "Capacitor",
+            "Inductor"
+        ]
+    },
+    {
+        "id": "capacitor",
+        "name": "Non-polarized Capacitor",
+        "svg": "<path d=\"M10 50 H42 M42 25 V75 M58 25 V75 M58 50 H90\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\"/>",
+        "options": [
+            "DC Power Source / Battery",
+            "Non-polarized Capacitor",
+            "SPST Toggle Switch",
+            "Transformer"
+        ]
+    },
+    {
+        "id": "ammeter",
+        "name": "Ammeter",
+        "svg": "<path d=\"M10 50 H25 M75 50 H90\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"25\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\"/><text x=\"50\" y=\"60\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" fill=\"#f59e0b\">A</text>",
+        "options": [
+            "Ammeter",
+            "Voltmeter",
+            "Electric Motor",
+            "Incandescent Lamp / Bulb"
+        ]
+    },
+    {
+        "id": "voltmeter",
+        "name": "Voltmeter",
+        "svg": "<path d=\"M10 50 H25 M75 50 H90\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"25\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\"/><text x=\"50\" y=\"60\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" fill=\"#f59e0b\">V</text>",
+        "options": [
+            "Ammeter",
+            "Voltmeter",
+            "Electric Motor",
+            "Incandescent Lamp / Bulb"
+        ]
+    },
+    {
+        "id": "motor",
+        "name": "Electric Motor",
+        "svg": "<path d=\"M10 50 H25 M75 50 H90\" stroke=\"#f59e0b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"25\" stroke=\"#f59e0b\" stroke-width=\"4\" fill=\"none\"/><text x=\"50\" y=\"60\" text-anchor=\"middle\" font-size=\"30\" font-family=\"Arial,sans-serif\" font-weight=\"bold\" fill=\"#f59e0b\">M</text>",
+        "options": [
+            "Ammeter",
+            "Voltmeter",
+            "Electric Motor",
+            "Incandescent Lamp / Bulb"
+        ]
+    }
+];
+
+        // 10 Full Vocational Curriculum Levels
+        const levels = [
+    {
+        "id": 0,
+        "title": "Level 1: Symbol Identification Quiz",
+        "category": "Phase 1: Theory",
+        "type": "quiz",
+        "description": "Identify all 10 essential schematic symbols to practice symbols before starting hands-on laboratory wiring."
+    },
+    {
+        "id": 1,
+        "title": "Level 2: Easy Series Wiring",
+        "category": "Phase 2: Series Wiring",
+        "type": "wiring",
+        "description": "Easy: make one complete path from Supply (+) to Switch 1, Lamp 1, Lamp 2, then Supply (−). Turn Switch 1 ON to light both lamps. Opening the switch stops current through both lamps.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 70,
+                "y": 120,
+                "label": "DC Supply"
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 260,
+                "y": 120,
+                "label": "Switch 1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 450,
+                "y": 120,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 640,
+                "y": 120,
+                "label": "Lamp 2"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "LAMP1_B",
+                "LAMP2_A"
+            ],
+            [
+                "LAMP2_B",
+                "BATT_NEG"
+            ]
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Level 3: Moderate Series Wiring",
+        "category": "Phase 2: Series Wiring",
+        "type": "wiring",
+        "description": "Moderate: make one complete path from Supply (+) to Switch 1, Lamp 1, Lamp 2, Switch 2, Lamp 3, then Supply (−). Turn both switches ON. All three lamps share the same current; opening either switch turns them all off.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 60,
+                "y": 90,
+                "label": "DC Supply"
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 250,
+                "y": 90,
+                "label": "Switch 1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 440,
+                "y": 90,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 630,
+                "y": 90,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 440,
+                "y": 280,
+                "label": "Switch 2"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 250,
+                "y": 280,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "LAMP1_B",
+                "LAMP2_A"
+            ],
+            [
+                "LAMP2_B",
+                "SW2_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP3_A"
+            ],
+            [
+                "LAMP3_B",
+                "BATT_NEG"
+            ]
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Level 4: 6-Lamp Master Chain",
+        "category": "Phase 2: Series Wiring",
+        "type": "wiring",
+        "description": "Connect Supply (+) to Switch 1, then Lamp 1, Lamp 2, Lamp 3, Lamp 4, Lamp 5, Lamp 6, Switch 2, and Supply (−), in one series path. Both switches must be ON.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 40,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 320,
+                "y": 90,
+                "label": "Switch 1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 460,
+                "y": 90,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 600,
+                "y": 90,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 600,
+                "y": 260,
+                "label": "Lamp 3"
+            },
+            {
+                "id": "lamp4",
+                "type": "lamp",
+                "x": 460,
+                "y": 260,
+                "label": "Lamp 4"
+            },
+            {
+                "id": "lamp5",
+                "type": "lamp",
+                "x": 320,
+                "y": 260,
+                "label": "Lamp 5"
+            },
+            {
+                "id": "lamp6",
+                "type": "lamp",
+                "x": 180,
+                "y": 260,
+                "label": "Lamp 6"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 40,
+                "y": 310,
+                "label": "Switch 2"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_NEG",
+                "SW2_B"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "LAMP1_B",
+                "LAMP2_A"
+            ],
+            [
+                "LAMP2_B",
+                "LAMP3_A"
+            ],
+            [
+                "LAMP3_B",
+                "LAMP4_A"
+            ],
+            [
+                "LAMP4_B",
+                "LAMP5_A"
+            ],
+            [
+                "LAMP5_B",
+                "LAMP6_A"
+            ],
+            [
+                "LAMP6_B",
+                "SW2_A"
+            ]
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Level 5: Master-Switch Parallel System",
+        "category": "Phase 3: Parallel Wiring",
+        "type": "wiring",
+        "description": "Connect Supply (+) to Master SW1. Split its output into two branches: SW2 controls Lamp 1; SW3 controls Lamps 2 and 3 in parallel. Connect each lamp return to Supply (−).",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 40,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 320,
+                "y": 180,
+                "label": "Master SW1"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 600,
+                "y": 80,
+                "label": "SW2"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 740,
+                "y": 80,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "sw3",
+                "type": "switch",
+                "x": 460,
+                "y": 280,
+                "label": "SW3"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 600,
+                "y": 230,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 600,
+                "y": 330,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP1_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP2_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "SW1_B",
+                "SW2_A"
+            ],
+            [
+                "SW1_B",
+                "SW3_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP1_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP2_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP3_A"
+            ]
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Level 6: Independent Parallel Channels",
+        "category": "Phase 3: Parallel Wiring",
+        "type": "wiring",
+        "description": "Split Supply (+) into three parallel paths: Switch 1 and Lamp 1; Switch 2 and Lamp 2; Switch 3 and Lamp 3. Connect each lamp return to Supply (−). Each switch controls its own lamp.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 50,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 360,
+                "y": 90,
+                "label": "Switch 1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 540,
+                "y": 90,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 360,
+                "y": 220,
+                "label": "Switch 2"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 540,
+                "y": 220,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "sw3",
+                "type": "switch",
+                "x": 360,
+                "y": 320,
+                "label": "Switch 3"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 540,
+                "y": 320,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_POS",
+                "SW2_A"
+            ],
+            [
+                "BATT_POS",
+                "SW3_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP1_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP2_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP2_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP3_A"
+            ]
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Level 7: 6-Lamp Dual Branch Grouping",
+        "category": "Phase 3: Parallel Wiring",
+        "type": "wiring",
+        "description": "Split Supply (+) into two groups. Switch 1 controls Lamps 1 and 2 in parallel. Switch 2 controls Lamps 3, 4, 5, and 6 in parallel. Connect every lamp return to Supply (−).",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 40,
+                "y": 200
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 300,
+                "y": 100,
+                "label": "Switch 1 (Duo)"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 450,
+                "y": 60,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 450,
+                "y": 140,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 300,
+                "y": 310,
+                "label": "Switch 2 (Quad)"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 450,
+                "y": 220,
+                "label": "Lamp 3"
+            },
+            {
+                "id": "lamp4",
+                "type": "lamp",
+                "x": 450,
+                "y": 280,
+                "label": "Lamp 4"
+            },
+            {
+                "id": "lamp5",
+                "type": "lamp",
+                "x": 450,
+                "y": 340,
+                "label": "Lamp 5"
+            },
+            {
+                "id": "lamp6",
+                "type": "lamp",
+                "x": 450,
+                "y": 400,
+                "label": "Lamp 6"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_POS",
+                "SW2_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP1_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP2_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP4_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP5_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP6_B"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "SW1_B",
+                "LAMP2_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP3_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP4_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP5_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP6_A"
+            ]
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Level 8: Series-Parallel Dual Branch Combination",
+        "category": "Phase 4: Series-Parallel",
+        "type": "wiring",
+        "description": "Connect Supply (+) to Master SW1, then split into two branches. SW2 controls Lamp 1. SW3 controls Lamps 2 and 3 connected in series. Complete both returns to Supply (−).",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 40,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 280,
+                "y": 180,
+                "label": "Master SW1"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 420,
+                "y": 90,
+                "label": "SW2 (Solo)"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 580,
+                "y": 90,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "sw3",
+                "type": "switch",
+                "x": 520,
+                "y": 280,
+                "label": "SW3 (Series Pair)"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 660,
+                "y": 230,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 660,
+                "y": 330,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP1_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "SW1_B",
+                "SW2_A"
+            ],
+            [
+                "SW1_B",
+                "SW3_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP1_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP2_A"
+            ],
+            [
+                "LAMP2_B",
+                "LAMP3_A"
+            ]
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Level 9: Parallel-Series Bottleneck",
+        "category": "Phase 4: Series-Parallel",
+        "type": "wiring",
+        "description": "Connect Supply (+) to Master SW1 and Lamp 1. Split after Lamp 1 into two branches: SW2 and Lamp 2; SW3 and Lamp 3. Complete both returns. Lamp 1 carries the combined branch current.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 40,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 280,
+                "y": 180,
+                "label": "Master SW1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 400,
+                "y": 180,
+                "label": "Lamp 1 (Bottleneck)"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 640,
+                "y": 90,
+                "label": "SW2"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 760,
+                "y": 90,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "sw3",
+                "type": "switch",
+                "x": 520,
+                "y": 270,
+                "label": "SW3"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 760,
+                "y": 270,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP2_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "LAMP1_B",
+                "SW2_A"
+            ],
+            [
+                "LAMP1_B",
+                "SW3_A"
+            ],
+            [
+                "SW2_B",
+                "LAMP2_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP3_A"
+            ]
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Level 10: Dual Feed Multi-Switch Logic",
+        "category": "Phase 4: Series-Parallel",
+        "type": "wiring",
+        "description": "Split Supply (+) into two paths: SW1 and Lamp 1; or SW2, SW3, Lamp 2, and Lamp 3 in series. Complete each return to Supply (−). The second path needs both switches ON.",
+        "components": [
+            {
+                "id": "batt",
+                "type": "power",
+                "x": 50,
+                "y": 180
+            },
+            {
+                "id": "sw1",
+                "type": "switch",
+                "x": 350,
+                "y": 90,
+                "label": "Switch 1"
+            },
+            {
+                "id": "lamp1",
+                "type": "lamp",
+                "x": 520,
+                "y": 90,
+                "label": "Lamp 1"
+            },
+            {
+                "id": "sw2",
+                "type": "switch",
+                "x": 330,
+                "y": 280,
+                "label": "Switch 2"
+            },
+            {
+                "id": "sw3",
+                "type": "switch",
+                "x": 460,
+                "y": 280,
+                "label": "Switch 3"
+            },
+            {
+                "id": "lamp2",
+                "type": "lamp",
+                "x": 600,
+                "y": 280,
+                "label": "Lamp 2"
+            },
+            {
+                "id": "lamp3",
+                "type": "lamp",
+                "x": 730,
+                "y": 280,
+                "label": "Lamp 3"
+            }
+        ],
+        "targetCircuit": [
+            [
+                "BATT_POS",
+                "SW1_A"
+            ],
+            [
+                "BATT_POS",
+                "SW2_A"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP1_B"
+            ],
+            [
+                "BATT_NEG",
+                "LAMP3_B"
+            ],
+            [
+                "SW1_B",
+                "LAMP1_A"
+            ],
+            [
+                "SW2_B",
+                "SW3_A"
+            ],
+            [
+                "SW3_B",
+                "LAMP2_A"
+            ],
+            [
+                "LAMP2_B",
+                "LAMP3_A"
+            ]
+        ]
+    }
+];
+
+        // Synthesized Audio Engine (No External Sound Files Required)
+        const AudioEngine = {
+            ctx: null,
+            master:null, sfxBus:null, musicBus:null, musicTimer:null,
+            isMusicRunning: false,
+
+            init() {
+                if (!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                    this.master=this.ctx.createGain();this.master.gain.value=masterVolume;
+                    const limiter=this.ctx.createDynamicsCompressor();
+                    this.master.connect(limiter);limiter.connect(this.ctx.destination);
+                    this.sfxBus=this.ctx.createGain();this.sfxBus.gain.value=isSFXEnabled?1:0;this.sfxBus.connect(this.master);
+                    this.musicBus=this.ctx.createGain();this.musicBus.gain.value=0;this.musicBus.connect(this.master);
+                }
+            },
+
+            playClick() {
+                if (!isSFXEnabled) return;
+                this.init();
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(1100, this.ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(280, this.ctx.currentTime + 0.04);
+                gain.gain.setValueAtTime(0.25, this.ctx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, this.ctx.currentTime + 0.04);
+                osc.connect(gain);
+                gain.connect(this.sfxBus);
+                osc.start();
+                osc.stop(this.ctx.currentTime + 0.04);
+            },
+
+            /* LOUD SHOCKING "BOOM!" EXPLOSION SOUND GENERATOR */
+            playBoomExplosion() {
+                if (!isSFXEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+
+                // 1. Sub-bass pitch-drop rumble (120Hz -> 20Hz)
+                const subOsc = this.ctx.createOscillator();
+                const subGain = this.ctx.createGain();
+                subOsc.type = 'sawtooth';
+                subOsc.frequency.setValueAtTime(140, now);
+                subOsc.frequency.exponentialRampToValueAtTime(20, now + 0.6);
+                subGain.gain.setValueAtTime(1.0, now); // MAX VOL
+                subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+
+                // 2. High-gain Noise explosion burst
+                const bufferSize = this.ctx.sampleRate * 0.6;
+                const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+                const noise = this.ctx.createBufferSource();
+                noise.buffer = buffer;
+
+                const filter = this.ctx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(800, now);
+                filter.frequency.linearRampToValueAtTime(100, now + 0.6);
+
+                const noiseGain = this.ctx.createGain();
+                noiseGain.gain.setValueAtTime(1.0, now);
+                noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+
+                subOsc.connect(subGain);
+                subGain.connect(this.sfxBus);
+
+                noise.connect(filter);
+                filter.connect(noiseGain);
+                noiseGain.connect(this.sfxBus);
+
+                subOsc.start(now);
+                noise.start(now);
+                subOsc.stop(now + 0.6);
+                noise.stop(now + 0.6);
+
+                // Screen shake + red shock flash visual animation
+                const mainBoard = document.getElementById('workbenchContainer');
+                const overlay = document.getElementById('shockOverlay');
+
+                mainBoard.classList.remove('boom-animation');
+                void mainBoard.offsetWidth; // Force Reflow
+                mainBoard.classList.add('boom-animation');
+
+                overlay.classList.remove('flash-red');
+                void overlay.offsetWidth;
+                overlay.classList.add('flash-red');
+
+                setTimeout(() => overlay.classList.remove('flash-red'), 500);
+            },
+
+            /* LOUD CELEBRATORY VICTORY FANFARE */
+            playVictoryFanfare() {
+                if (!isSFXEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+
+                notes.forEach((freq, idx) => {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+
+                    gain.gain.setValueAtTime(0, now + idx * 0.08);
+                    gain.gain.linearRampToValueAtTime(0.5, now + idx * 0.08 + 0.02);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.35);
+
+                    osc.connect(gain);
+                    gain.connect(this.sfxBus);
+                    osc.start(now + idx * 0.08);
+                    osc.stop(now + idx * 0.08 + 0.35);
+                });
+            },
+
+
+            /* Original synthesized arcade loop: bass, melody, kick and hi-hat. */
+            startBackgroundMusic() {
+                if(!gamePlaying||!isMusicEnabled||this.isMusicRunning)return;
+                this.init();this.isMusicRunning=true;
+                this.musicBus.gain.setValueAtTime(1,this.ctx.currentTime);
+                const stepSeconds=60/132/2;let step=0;
+                const lead=[0,7,12,7,3,7,15,12,5,12,17,12,7,14,19,14];
+                const roots=[130.81,155.56,174.61,196];
+                const tone=(frequency,duration,volume,type='triangle')=>{
+                    const now=this.ctx.currentTime,osc=this.ctx.createOscillator(),gain=this.ctx.createGain();
+                    osc.type=type;osc.frequency.setValueAtTime(frequency,now);
+                    gain.gain.setValueAtTime(.001,now);gain.gain.linearRampToValueAtTime(volume,now+.01);gain.gain.exponentialRampToValueAtTime(.001,now+duration);
+                    osc.connect(gain);gain.connect(this.musicBus);osc.onended=()=>{osc.disconnect();gain.disconnect();};osc.start(now);osc.stop(now+duration);
+                };
+                const beat=()=>{
+                    if(!gamePlaying||!this.isMusicRunning||!isMusicEnabled)return;
+                    const root=roots[Math.floor(step/8)%4];
+                    tone(root*2*Math.pow(2,lead[step%16]/12),stepSeconds*.8,.07);
+                    if(step%2===0){tone(root/2,stepSeconds*1.6,.1,'sine');
+                        const now=this.ctx.currentTime,osc=this.ctx.createOscillator(),gain=this.ctx.createGain();osc.frequency.setValueAtTime(135,now);osc.frequency.exponentialRampToValueAtTime(45,now+.13);gain.gain.setValueAtTime(.14,now);gain.gain.exponentialRampToValueAtTime(.001,now+.16);osc.connect(gain);gain.connect(this.musicBus);osc.onended=()=>{osc.disconnect();gain.disconnect();};osc.start(now);osc.stop(now+.17);
+                    }
+                    const now=this.ctx.currentTime,buffer=this.ctx.createBuffer(1,Math.ceil(this.ctx.sampleRate*.04),this.ctx.sampleRate),data=buffer.getChannelData(0);
+                    for(let i=0;i<data.length;i++)data[i]=Math.random()*2-1;
+                    const hat=this.ctx.createBufferSource(),filter=this.ctx.createBiquadFilter(),gain=this.ctx.createGain();hat.buffer=buffer;filter.type='highpass';filter.frequency.value=6500;gain.gain.setValueAtTime(step%2?.045:.025,now);gain.gain.exponentialRampToValueAtTime(.001,now+.04);hat.connect(filter);filter.connect(gain);gain.connect(this.musicBus);hat.onended=()=>{hat.disconnect();filter.disconnect();gain.disconnect();};hat.start(now);hat.stop(now+.05);
+                    step++;this.musicTimer=setTimeout(beat,stepSeconds*1000);
+                };
+                beat();
+            },
+            stopBackgroundMusic() {
+                this.isMusicRunning=false;
+                if(this.musicTimer!==null)clearTimeout(this.musicTimer);this.musicTimer=null;
+                if(this.musicBus)this.musicBus.gain.setValueAtTime(0,this.ctx.currentTime);
+            }
+
+        };
+
+
+        ['playClick','playBoomExplosion','playVictoryFanfare','startBackgroundMusic'].forEach(name => {
+            const original = AudioEngine[name];
+            AudioEngine[name] = function(...args) {
+                try { return original.apply(this,args); }
+                catch (error) {
+                    this.stopBackgroundMusic();
+                    isMusicEnabled=false; isSFXEnabled=false;
+                    syncAudioControls();
+                }
+            };
+        });
+
+        function toggleMusic(){isMusicEnabled=!isMusicEnabled;if(isMusicEnabled&&gamePlaying)AudioEngine.startBackgroundMusic();else AudioEngine.stopBackgroundMusic();syncAudioControls();saveAudioSettings();}
+        function toggleSFX(){isSFXEnabled=!isSFXEnabled;syncAudioControls();saveAudioSettings();}
+
+        function selectWireColor(color) {
+            AudioEngine.playClick();
+            selectedWireColor = color;
+            ['red', 'black', 'blue', 'yellow'].forEach(c => {
+                const btn = document.getElementById(`colorBtn_${c}`);
+                if (c === color) btn.classList.add('ring-2', 'ring-amber-400', 'scale-110');
+                else btn.classList.remove('ring-2', 'ring-amber-400', 'scale-110');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            restoreAudioSettings();
+            buildNavigationMenu();
+            loadLevel(0);
+            initializeFlexibleBoard();
+            showMainMenu();
+            document.addEventListener('visibilitychange',()=>{
+                if(document.hidden) {AudioEngine.stopBackgroundMusic();if(AudioEngine.ctx)AudioEngine.ctx.suspend().catch(()=>{});}
+                else if(gamePlaying){if(AudioEngine.ctx)AudioEngine.ctx.resume().catch(()=>{});AudioEngine.startBackgroundMusic();}
+            });
+        });
+
+        function togglePhoneHelp() {toggleInstructionPanel();}
+        let quizTimer=null;
+        let quizAnswered=false;
+        function buildNavigationMenu() {
+            syncVisibleLevelNavigation();
+            const selector=document.getElementById('phoneLevelSelect');
+            selector.innerHTML='';
+            levels.forEach((level,index)=>{const option=document.createElement('option');option.value=index;option.textContent=level.title;selector.appendChild(option);});
+            selector.value=String(currentLevelIndex);
+            const menu = document.getElementById('levelMenuList');
+            menu.innerHTML = '';
+
+            let lastCat = '';
+            levels.forEach((lvl, idx) => {
+                if (lvl.category !== lastCat) {
+                    const catHeader = document.createElement('div');
+                    catHeader.className = "text-[9px] font-black text-amber-500/80 uppercase tracking-widest mt-2 mb-1 px-1";
+                    catHeader.innerText = lvl.category;
+                    menu.appendChild(catHeader);
+                    lastCat = lvl.category;
+                }
+
+                const item = document.createElement('button');
+                item.className = `w-full text-left px-2.5 py-1.5 rounded font-bold text-xs transition flex items-center justify-between ${idx === currentLevelIndex ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow' : 'text-stone-300 hover:bg-stone-800'}`;
+                item.onclick = () => loadLevel(idx);
+                item.innerHTML = `
+                    <span class="truncate">${lvl.title}</span>
+                    <span class="text-[9px] opacity-70">${lvl.type === 'quiz' ? '✏️ Quiz' : '⚡ Lab'}</span>
+                `;
+                menu.appendChild(item);
+            });
+        }
+
+        function loadLevel(index) {
+            saveLevelState();
+            cancelCelebration();
+            closeLessonResult(); supplyEnabled=true;wireStates=new Map();
+            document.body.dataset.mode=levels[index].type;
+            if(quizTimer!==null)clearTimeout(quizTimer);
+            quizTimer=null;quizAnswered=false;
+            cancelAutoAdvance();
+            completionAnnounced=false;
+            cancelWireStart();
+            selectedWireId = null;
+            dragPin = null;
+            currentLevelIndex = index;
+            document.getElementById("boardTools").hidden = levels[index].type === "quiz";
+            wires = [];
+            componentStates = {};
+            buildNavigationMenu();
+
+            const lvl = levels[index];
+            document.getElementById('levelBadge').innerText = lvl.title;
+            document.getElementById('taskTitle').innerText = lvl.title;
+            document.getElementById('taskDesc').innerText = lvl.description;
+
+            const quizView = document.getElementById('quizViewContainer');
+            const wiringView = document.getElementById('wiringWorkspace');
+            const quizBadge = document.getElementById('quizScoreBadge');
+
+            if (lvl.type === 'quiz') {
+                quizView.classList.remove('hidden');
+                wiringView.classList.add('hidden');
+                quizBadge.classList.remove('hidden');
+                const saved=levelSnapshots.get(index);
+                quizCurrentQuestion = saved?.quizCurrentQuestion || 0;
+                quizScore = saved?.quizScore || 0;
+                renderQuizQuestion();
+            } else {
+                quizView.classList.add('hidden');
+                wiringView.classList.remove('hidden');
+                quizBadge.classList.add('hidden');
+                setupWiringBoard(lvl);
+                const saved=levelSnapshots.get(index);
+                if(saved){wires=JSON.parse(JSON.stringify(saved.wires));componentStates={...saved.states};supplyEnabled=saved.supplyEnabled;for(const c of lvl.components)if(c.type==='switch'){const btn=document.getElementById('sw_btn_'+c.id);btn.textContent=componentStates[c.id]?'ON 🟢':'OFF 🔴';}}
+            }
+            levelLoaded=true;updateCircuitPhysics();syncSavedLevel();
+        }
+
+        /* SCHEMATIC SYMBOL QUIZ LOGIC */
+        function renderQuizQuestion() {
+            if(completedLevels.has(0)){renderSavedQuiz();return;}
+            quizAnswered=false;
+            document.getElementById('quizTotal').textContent=symbolQuizData.length;
+            document.getElementById('quizProgress').textContent='Question '+(quizCurrentQuestion+1)+' of '+symbolQuizData.length;
+            if(quizCurrentQuestion>=symbolQuizData.length){showLessonResult();return;}
+            const qData = symbolQuizData[quizCurrentQuestion];
+            document.getElementById('quizScore').innerText = quizScore;
+            document.getElementById('quizSymbolSvg').innerHTML = qData.svg;
+            document.getElementById('quizFeedback').innerText = '';
+
+            const optionsGrid = document.getElementById('quizOptionsGrid');
+            optionsGrid.innerHTML = '';
+
+            const savedAnswer=quizResponses.get(qData.id);quizAnswered=savedAnswer!==undefined;
+            document.getElementById('quizNextQuestion').hidden=!quizAnswered;
+            if(quizAnswered)document.getElementById('quizFeedback').textContent='Saved answer: '+savedAnswer+' — '+(savedAnswer===qData.name?'Correct':'Correct answer: '+qData.name);
+            qData.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "p-3 bg-stone-900 hover:bg-amber-500/20 border border-stone-800 rounded-xl font-bold text-xs text-stone-200 transition text-left shadow";
+                btn.innerText = opt;btn.disabled=quizAnswered;if(opt===savedAnswer)btn.style.borderColor='#fbbf24';
+                btn.onclick = () => handleQuizAnswer(opt, qData.name, btn);
+                optionsGrid.appendChild(btn);
+            });
+        }
+
+        function handleQuizAnswer(selected, correct, btnElem) {
+            if(quizAnswered || currentLevelIndex!==0)return;
+            quizAnswered=true;quizResponses.set(symbolQuizData[quizCurrentQuestion].id,selected);
+            const feedback = document.getElementById('quizFeedback');
+            if (selected === correct) {
+                celebrateCorrectAnswer();
+                btnElem.classList.add('bg-emerald-600/30', 'border-emerald-500', 'text-emerald-300');
+                feedback.className = "text-center text-xs font-black text-emerald-400";
+                feedback.innerText = "✓ Correct Schematic Symbol!";
+                quizScore++;
+            } else {
+                AudioEngine.playBoomExplosion(); // BOOM SFX ON WRONG QUIZ ANSWER
+                btnElem.classList.add('bg-rose-600/30', 'border-rose-500', 'text-rose-300');
+                feedback.className = "text-center text-xs font-black text-rose-400";
+                feedback.innerText = `💥 WRONG! Symbol is: ${correct}`;
+            }
+
+            document.getElementById('quizScore').innerText=quizScore;
+            document.querySelectorAll('#quizOptionsGrid button').forEach(b => b.disabled = true);
+
+            saveLevelState();
+            if(quizResponses.size===symbolQuizData.length){
+                finalQuizPoints=quizScore;completedLevels.add(0);renderSavedQuiz();syncSavedLevel();showLessonResult();
+            }else document.getElementById('quizNextQuestion').hidden=false;
+
+        }
+
+        /* RENDERING HARDWARE COMPONENTS ON WORKBENCH BOARD */
+        function setupWiringBoard(level) {
+            const layer = document.getElementById('componentsLayer');
+            layer.innerHTML = '';
+
+            level.components.forEach(c => {
+                if (c.type === 'switch') componentStates[c.id] = false;
+
+            });
+
+            level.components.forEach(comp => {
+                const el = document.createElement('div');
+                el.dataset.componentId = comp.id;
+                el.className = "board-component absolute bg-stone-900/90 border-2 border-stone-700/80 rounded-xl p-3 shadow-2xl flex flex-col items-center justify-center backdrop-blur-md";
+                el.style.left = `${comp.x}px`;
+                el.style.top = `${comp.y}px`;
+                el.style.width = "140px";
+
+                let innerHtml = `
+                    <div class="absolute -top-1.5 left-2 w-2.5 h-2.5 screw-head rounded-full"></div>
+                    <div class="absolute -top-1.5 right-2 w-2.5 h-2.5 screw-head rounded-full"></div>
+                    <div class="text-[10px] font-black text-stone-300 mb-1 uppercase tracking-wider">${comp.label || comp.type}</div>
+                `;
+
+                if (comp.type === 'power') {
+                    innerHtml += `
+                        <div class="flex flex-col items-center bg-black/70 p-1.5 rounded border border-stone-800 w-full">
+                            <span class="text-xs font-mono font-bold text-amber-400">12.0 V EMF</span>
+                            <span class="text-[8px] font-bold text-emerald-400 uppercase">DC SUPPLY</span>
+                        </div>
+                        <div class="terminal-row flex justify-between w-full mt-2 px-0.5">
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_POS`, 'red', '+')}
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_NEG`, 'black', '-')}
+                        </div>
+                    `;
+                } else if (comp.type === 'switch') {
+                    innerHtml += `
+                        <button id="sw_btn_${comp.id}" onclick="toggleSwitch('${comp.id}')" class="w-full py-1 bg-stone-800 border border-stone-600 text-stone-200 text-[11px] font-black rounded shadow my-1">
+                            OFF 🔴
+                        </button>
+                        <div class="terminal-row flex justify-between w-full mt-1.5 px-0.5">
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_A`, 'amber', 'In')}
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_B`, 'amber', 'Out')}
+                        </div>
+                    `;
+                } else if (comp.type === 'lamp') {
+                    innerHtml += `
+                        <div id="lamp_glow_${comp.id}" class="w-10 h-10 rounded-full bg-stone-950 border-2 border-stone-700 flex items-center justify-center text-xl transition-all duration-300 my-1 shadow">
+                            💡
+                        </div>
+                        <div class="terminal-row flex justify-between w-full mt-1.5 px-0.5">
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_A`, 'amber', 'T1')}
+                            ${createTerminalBtn(`${comp.id.toUpperCase()}_B`, 'amber', 'T2')}
+                        </div>
+                    `;
+                }
+
+                innerHtml += `
+                    <div class="absolute -bottom-1.5 left-2 w-2.5 h-2.5 screw-head rounded-full"></div>
+                    <div class="absolute -bottom-1.5 right-2 w-2.5 h-2.5 screw-head rounded-full"></div>
+                `;
+
+                if(comp.type==='lamp') innerHtml += '<div class="component-reading" id="reading_'+comp.id+'"></div>';
+                el.innerHTML = innerHtml;
+                layer.appendChild(el);
+            });
+
+            layoutBoard();
+        }
+
+        function createTerminalBtn(nodeId, color, label) {
+            const colorClass = color === 'red' ? 'bg-red-600 border-red-300' : (color === 'black' ? 'bg-stone-900 border-stone-400' : 'bg-amber-500 border-amber-300');
+            return `
+                <div class="flex flex-col items-center">
+                    <button id="term_${nodeId}" aria-label="${nodeId.replace(/_/g, ' ')} terminal" title="Connect ${nodeId}" onclick="handleTerminalClick('${nodeId}')" class="terminal-node w-4 h-4 ${colorClass} rounded-full border-2 shadow cursor-pointer focus:outline-none"></button>
+                    <span class="text-[8px] font-mono font-bold text-stone-400 mt-0.5">${label}</span>
+                </div>
+            `;
+        }
+
+        function toggleSwitch(swId) {
+            if(completedLevels.has(currentLevelIndex))return;
+            AudioEngine.playClick();
+            componentStates[swId] = !componentStates[swId];
+            const btn = document.getElementById(`sw_btn_${swId}`);
+            btn.innerHTML = componentStates[swId] ? 'ON 🟢' : 'OFF 🔴';
+            btn.className = `w-full py-1 border text-[11px] font-black rounded shadow my-1 ${componentStates[swId] ? 'bg-emerald-600/30 border-emerald-500 text-emerald-300' : 'bg-stone-800 border-stone-600 text-stone-200'}`;
+            updateCircuitPhysics();
+        }
+
+        function handleTerminalClick(nodeId) {
+            if(completedLevels.has(currentLevelIndex))return;
+            AudioEngine.playClick();
+            if (!activeWireStart) {
+                activeWireStart = nodeId;
+                document.getElementById(`term_${nodeId}`).classList.add('ring-4', 'ring-cyan-400');
+            } else {
+                if (activeWireStart !== nodeId) {
+                    const exists = wires.some(w => (w.from === activeWireStart && w.to === nodeId) || (w.from === nodeId && w.to === activeWireStart));
+                    if (!exists) {
+                        wires.push({
+                            id: `wire_${++wireSequence}`,
+                            pins: [],
+                            from: activeWireStart,
+                            to: nodeId,
+                            color: selectedWireColor
+                        });
+
+                    }
+                }
+                document.getElementById(`term_${activeWireStart}`).classList.remove('ring-4', 'ring-cyan-400');
+                activeWireStart = null;
+                renderWires();
+                updateCircuitPhysics();
+            }
+        }
+
+
+        let selectedWireId = null;
+        let wireSequence = 0;
+        let dragPin = null;
+        let boardColumns = 0;
+        let boardObstacles = [];
+
+        function cancelWireStart() {
+            if (activeWireStart) document.getElementById('term_' + activeWireStart)?.classList.remove('ring-4', 'ring-cyan-400');
+            activeWireStart = null;
+        }
+
+        function initializeFlexibleBoard() {
+            const phoneLayout=window.matchMedia('(max-width:1100px) and (max-height:600px), (max-width:760px)');
+            const placeWireActions=()=>{
+                const actions=document.querySelector('.wire-actions');
+                const target=phoneLayout.matches?document.querySelector('header > div:last-child'):document.getElementById('boardTools');
+                target.appendChild(actions);
+            };
+            placeWireActions();
+            if (phoneLayout.addEventListener) phoneLayout.addEventListener('change',placeWireActions);
+            else phoneLayout.addListener(placeWireActions);
+            document.getElementById('boardTools').appendChild(document.getElementById('multimeterWidget'));
+            const refreshBoard = () => { if (levels[currentLevelIndex].type !== 'quiz') layoutBoard(); };
+            if (window.ResizeObserver) new ResizeObserver(refreshBoard).observe(document.getElementById('wiringWorkspace'));
+            window.addEventListener('resize', refreshBoard, {passive:true});
+            const canvas = document.getElementById('wireCanvas');
+            canvas.addEventListener('dblclick', e => {
+                const p=boardPoint(e);
+                const ordered=[...wires].sort((a,b)=>(b.id===selectedWireId)-(a.id===selectedWireId));
+                for (const wire of ordered) {
+                    const index=(wire.pins || []).findIndex(pin=>Math.hypot(pin.x-p.x,pin.y-p.y)<12);
+                    if (index>=0) {wire.pins.splice(index,1); renderWires(); break;}
+                }
+            });
+            canvas.addEventListener('pointermove', e => {
+                if (!dragPin) return;
+                const wire = wires.find(w => w.id === dragPin.wireId);
+                if (!wire) return;
+                const point = boardPoint(e);
+                if (pointIsFree(point)) {
+                    wire.pins[dragPin.index] = point;
+                    renderWires();
+                }
+            });
+            const release = () => { dragPin = null; };
+            canvas.addEventListener('pointerup', release);
+            canvas.addEventListener('pointercancel', release);
+            canvas.addEventListener('lostpointercapture', release);
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    cancelWireStart(); selectedWireId = null; dragPin = null; renderWires();
+                }
+            });
+        }
+
+
+        let boardScale=1;
+        function fitBoardGeometry(count,width,height){
+ let best=null;
+ for(let cols=1;cols<=Math.max(1,count);cols++){
+  const rows=Math.ceil(count/cols),w=cols*196+32,h=rows*190+64;
+  const scale=Math.max(0,Math.min(1,(width-8)/w,(height-8)/h));
+  if(!best||scale>best.scale)best={cols,width:w,height:h,scale};
+ }
+ return best;
+}
+function layoutBoard(){
+ const workspace=document.getElementById('wiringWorkspace');
+ const cards=[...document.querySelectorAll('.board-component')];
+ if(!workspace.clientWidth||!workspace.clientHeight||!cards.length)return;
+ const fit=fitBoardGeometry(cards.length,workspace.clientWidth,workspace.clientHeight);
+ // Keep custom wire pins when the screen size and orientation change.
+ if(boardColumns&&boardColumns!==fit.cols){
+  const old=boardColumns;
+  for(const wire of wires)for(const pin of wire.pins||[]){
+   const col=Math.min(old-1,Math.max(0,Math.floor((pin.x-48)/196)));
+   const row=Math.max(0,Math.floor((pin.y-32)/190));
+   const index=Math.min(cards.length-1,row*old+col);
+   pin.x=48+(index%fit.cols)*196+Math.max(0,Math.min(180,pin.x-(48+col*196)));
+   pin.y=32+Math.floor(index/fit.cols)*190+Math.max(0,Math.min(174,pin.y-(32+row*190)));
+  }
+ }
+ boardColumns=fit.cols;boardScale=Math.max(.0001,fit.scale);
+ const surface=document.getElementById('boardSurface');
+ surface.style.width=fit.width+'px';surface.style.height=fit.height+'px';surface.style.transform='scale('+boardScale+')';
+ surface.style.left=Math.max(0,(workspace.clientWidth-fit.width*boardScale)/2)+'px';
+ surface.style.top=Math.max(0,(workspace.clientHeight-fit.height*boardScale)/2)+'px';
+ cards.forEach((card,i)=>{card.style.left=(48+(i%fit.cols)*196)+'px';card.style.top=(32+Math.floor(i/fit.cols)*190)+'px';});
+ renderWires();
+}
+        function boardPoint(event) {
+            const rect=document.getElementById('wireCanvas').getBoundingClientRect();
+            return {x:Math.max(16,Math.min(rect.width/boardScale-16,(event.clientX-rect.left)/boardScale)),y:Math.max(16,Math.min(rect.height/boardScale-16,(event.clientY-rect.top)/boardScale))};
+        }
+
+        function pointIsFree(p) {
+            return !boardObstacles.some(r => p.x > r.left && p.x < r.right && p.y > r.top && p.y < r.bottom);
+        }
+
+        // Rectilinear shortest paths through free space, with rounded corners below.
+        // Only the short terminal leads enter their own component clearance area.
+        function routeBetween(a, b, obstacles) {
+            const xs = [...new Set([a.x, b.x, 16, ...obstacles.flatMap(r => [r.left, r.right])])].sort((a,b) => a-b);
+            const ys = [...new Set([a.y, b.y, 16, ...obstacles.flatMap(r => [r.top, r.bottom])])].sort((a,b) => a-b);
+            const nx = xs.length, ny = ys.length;
+            const start = ys.indexOf(a.y) * nx + xs.indexOf(a.x);
+            const end = ys.indexOf(b.y) * nx + xs.indexOf(b.x);
+            const dist = new Map([[start, 0]]), prev = new Map(), open = new Set([start]), closed = new Set();
+            const point = id => ({x: xs[id % nx], y: ys[Math.floor(id / nx)]});
+            const clear = (p,q) => !obstacles.some(r => p.x === q.x
+                ? p.x > r.left && p.x < r.right && Math.max(p.y,q.y) > r.top && Math.min(p.y,q.y) < r.bottom
+                : p.y > r.top && p.y < r.bottom && Math.max(p.x,q.x) > r.left && Math.min(p.x,q.x) < r.right);
+            while (open.size) {
+                let current, best = Infinity;
+                for (const id of open) {
+                    const p = point(id), score = dist.get(id) + Math.abs(p.x-b.x) + Math.abs(p.y-b.y);
+                    if (score < best) { best = score; current = id; }
+                }
+                if (current === end) {
+                    const result = [point(end)];
+                    while (prev.has(current)) { current = prev.get(current); result.unshift(point(current)); }
+                    return result;
+                }
+                open.delete(current); closed.add(current);
+                const col = current % nx, row = Math.floor(current / nx), p = point(current);
+                const neighbors = [];
+                if (col) neighbors.push(current - 1);
+                if (col < nx-1) neighbors.push(current + 1);
+                if (row) neighbors.push(current - nx);
+                if (row < ny-1) neighbors.push(current + nx);
+                for (const id of neighbors) {
+                    if (closed.has(id)) continue;
+                    const q = point(id);
+                    if (!clear(p,q)) continue;
+                    const cost = dist.get(current) + Math.abs(p.x-q.x) + Math.abs(p.y-q.y);
+                    if (cost < (dist.get(id) ?? Infinity)) { dist.set(id,cost); prev.set(id,current); open.add(id); }
+                }
+            }
+            return []; // Never silently draw a wire across a component.
+        }
+
+        function roundedWirePath(points) {
+            const clean = [];
+            for (const p of points) {
+                const last = clean[clean.length-1];
+                if (last && last.x === p.x && last.y === p.y) continue;
+                while (clean.length > 1) {
+                    const a = clean[clean.length-2], b = clean[clean.length-1];
+                    if ((b.x-a.x)*(p.y-b.y) !== (b.y-a.y)*(p.x-b.x) || (b.x-a.x)*(p.x-b.x)+(b.y-a.y)*(p.y-b.y) < 0) break;
+                    clean.pop();
+                }
+                clean.push(p);
+            }
+            if (!clean.length) return '';
+            let d = 'M ' + clean[0].x + ' ' + clean[0].y;
+            for (let i=1; i<clean.length-1; i++) {
+                const a=clean[i-1], b=clean[i], c=clean[i+1];
+                const l1=Math.hypot(b.x-a.x,b.y-a.y), l2=Math.hypot(c.x-b.x,c.y-b.y), r=Math.min(10,l1/2,l2/2);
+                d += ' L '+(b.x+(a.x-b.x)*r/l1)+' '+(b.y+(a.y-b.y)*r/l1);
+                d += ' Q '+b.x+' '+b.y+' '+(b.x+(c.x-b.x)*r/l2)+' '+(b.y+(c.y-b.y)*r/l2);
+            }
+            const end = clean[clean.length-1];
+            return d + ' L ' + end.x + ' ' + end.y;
+        }
+
+        function renderWires() {
+            const canvas = document.getElementById('wireCanvas');
+            canvas.querySelectorAll('.wire-render').forEach(e => e.remove());
+            const rect = canvas.getBoundingClientRect();
+            boardObstacles = [...document.querySelectorAll('.board-component')].map(el => {
+                const r = el.getBoundingClientRect();
+                return {left:(r.left-rect.left)/boardScale-16, right:(r.right-rect.left)/boardScale+16, top:(r.top-rect.top)/boardScale-16, bottom:(r.bottom-rect.top)/boardScale+16};
+            });
+            const colors = {red:'#ef4444', black:'#1c1917', blue:'#3b82f6', yellow:'#f59e0b'};
+            const svg = (tag, attrs, parent=canvas) => {
+                const el = document.createElementNS('http://www.w3.org/2000/svg',tag);
+                for (const [key,value] of Object.entries(attrs)) el.setAttribute(key,value);
+                parent.appendChild(el); return el;
+            };
+            const ordered = [...wires.filter(w => w.id !== selectedWireId), ...wires.filter(w => w.id === selectedWireId)];
+            for (const w of ordered) {
+                const termA = document.getElementById('term_'+w.from), termB = document.getElementById('term_'+w.to);
+                if (!termA || !termB) continue;
+                // Offset geometry avoids the hover scale changing a wire's anchor.
+                const center = el => {
+                    const holder = el.parentElement.getBoundingClientRect();
+                    return {x:(holder.left-rect.left+holder.width/2)/boardScale, y:(holder.top-rect.top)/boardScale+el.offsetHeight/2};
+                };
+                const a = center(termA), b = center(termB);
+                const exit = (el,p) => ({x:p.x, y:(el.closest('.board-component').getBoundingClientRect().bottom-rect.top)/boardScale+24+(wires.indexOf(w)%6)*5});
+                const start=exit(termA,a), end=exit(termB,b);
+                const anchors=[start,...(w.pins || []),end];
+                const points=[a,start]; let valid=true;
+                for (let i=1;i<anchors.length;i++) {
+                    const section=routeBetween(anchors[i-1],anchors[i],boardObstacles);
+                    if (!section.length) { valid=false; break; }
+                    points.push(...section);
+                }
+                if (!valid) continue;
+                points.push(b);
+                const d=roundedWirePath(points), selected=w.id === selectedWireId;
+                const group=svg('g', {'class':'wire-render','data-wire-id':w.id});
+                svg('path',{d,fill:'none',stroke:selected?'#67e8f9':'#e7e5e4', 'stroke-opacity':selected?'.9':'.22','stroke-width':selected?9:7,'stroke-linecap':'round','pointer-events':'none'},group);
+                svg('path',{d,fill:'none',stroke:colors[wireStates.get(w.id)?.color||'blue'],'stroke-width':4,'stroke-linecap':'round','class':'wire-line'+(wireStates.get(w.id)?.active?' flow-active':''),'pointer-events':'none'},group);
+                const hit=svg('path',{d,fill:'none',stroke:'transparent','stroke-width':16,'class':'wire-hit',tabindex:0,role:'button','aria-label':'Wire '+w.from+' to '+w.to+' — '+(wireStates.get(w.id)?.label||'No current')},group);
+                hit.onclick=e => {
+                    e.stopPropagation(); cancelWireStart(); selectedWireId=w.id;
+                    const p=boardPoint(e);
+                    if (pointIsFree(p)) {
+                        // Insert into the nearest routed section, preserving existing pin order.
+                        let best=Infinity, at=0;
+                        for (let i=1;i<anchors.length;i++) {
+                            const route=routeBetween(anchors[i-1],anchors[i],boardObstacles);
+                            for (let j=1;j<route.length;j++) {
+                                const u=route[j-1],v=route[j],dx=v.x-u.x,dy=v.y-u.y;
+                                const t=Math.max(0,Math.min(1,((p.x-u.x)*dx+(p.y-u.y)*dy)/(dx*dx+dy*dy || 1)));
+                                const distance=Math.hypot(p.x-u.x-t*dx,p.y-u.y-t*dy);
+                                if (distance<best) {best=distance;at=i-1;}
+                            }
+                        }
+                        (w.pins || (w.pins = [])).splice(at,0,p);
+                    }
+                    renderWires();
+                };
+                hit.onkeydown=e => {
+                    if (e.key==='Enter' || e.key===' ') {e.preventDefault(); selectedWireId=w.id; renderWires();}
+                };
+                (w.pins || []).forEach((p,i) => {
+                    const pin=svg('circle',{cx:p.x,cy:p.y,r:window.matchMedia('(pointer:coarse)').matches?12:(selected?7:4),fill:selected?'#cffafe':'#e7e5e4',stroke:'#155e75','stroke-width':2,'class':'wire-pin',tabindex:0,role:'button','aria-label':'Wire pin '+(i+1)+' for '+w.from+' to '+w.to},group);
+                    pin.onpointerdown=e => {
+                        e.preventDefault(); e.stopPropagation(); cancelWireStart(); selectedWireId=w.id;
+                        dragPin={wireId:w.id,index:i}; if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
+                        pin.setAttribute("r",window.matchMedia('(pointer:coarse)').matches?12:7);
+                        document.getElementById("autoRouteBtn").disabled=false;
+                        document.getElementById("deleteWireBtn").disabled=false;
+                    };
+                    pin.ondblclick=e => {e.stopPropagation(); w.pins.splice(i,1); renderWires();};
+                    pin.onkeydown=e => {
+                        const steps={ArrowLeft:[-8,0],ArrowRight:[8,0],ArrowUp:[0,-8],ArrowDown:[0,8]};
+                        if (steps[e.key]) {
+                            e.preventDefault(); const [dx,dy]=steps[e.key], q={x:p.x+dx,y:p.y+dy};
+                            if (q.x>=16 && q.y>=16 && q.x<=rect.width/boardScale-16 && q.y<=rect.height/boardScale-16 && pointIsFree(q)) w.pins[i]=q;
+                        } else if (e.key==='Delete' || e.key==='Backspace') {e.preventDefault(); w.pins.splice(i,1);} else return;
+                        selectedWireId=w.id; renderWires();
+                        canvas.querySelector('[data-wire-id="'+w.id+'"]')?.querySelectorAll('.wire-pin')[i]?.focus();
+                    };
+                });
+            }
+            const selected = wires.some(w => w.id === selectedWireId);
+            document.getElementById('autoRouteBtn').disabled = !selected;
+            document.getElementById('deleteWireBtn').disabled = !selected;
+        }
+
+        function autoRouteSelected() {
+            if(completedLevels.has(currentLevelIndex))return;
+            const w=wires.find(w => w.id===selectedWireId);
+            if (w) { w.pins=[]; renderWires(); }
+        }
+
+        function deleteSelectedWire() {
+            const index=wires.findIndex(w => w.id===selectedWireId);
+            if (index>=0) {selectedWireId=null; removeWire(index);}
+        }
+
+        function removeWire(index) {
+            if(completedLevels.has(currentLevelIndex))return;
+            AudioEngine.playClick();
+            wires.splice(index, 1);
+            renderWires();
+            updateCircuitPhysics();
+        }
+
+        function resetCurrentLevelWires() {
+            if(completedLevels.has(currentLevelIndex))return;
+            AudioEngine.playClick();
+            cancelWireStart();
+            selectedWireId = null;
+            wires = [];
+            renderWires();
+            updateCircuitPhysics();
+        }
+
+        /* CIRCUIT PHYSICS & SHORT-CIRCUIT DETECTOR ENGINE */
+        // Explicit teaching assumptions. These are not equipment ratings for a real lab.
+        const DC_MODEL = Object.freeze({volts:12, sourceOhms:0.1, lampOhms:10});
+        let lastCircuitResult = null;
+        function terminalsFor(level) {
+            return (level.components || []).flatMap(c => {
+                const id=c.id.toUpperCase();
+                return c.type==='power' ? [id+'_POS',id+'_NEG'] : [id+'_A',id+'_B'];
+            });
+        }
+        function makeNets(nodes) {
+            const parent=new Map(nodes.map(n=>[n,n]));
+            const find=n=>{if(!parent.has(n)) return null; if(parent.get(n)!==n) parent.set(n,find(parent.get(n))); return parent.get(n);};
+            const join=(a,b)=>{a=find(a);b=find(b);if(a!==null&&b!==null&&a!==b)parent.set(a,b);};
+            return {find,join};
+        }
+        function auditWiring(level, connections) {
+            const nodes=terminalsFor(level), expected=makeNets(nodes), actual=makeNets(nodes);
+            for(const [a,b] of level.targetCircuit) expected.join(a,b);
+            for(const w of connections) actual.join(w.from,w.to);
+            const wrong=connections.filter(w=>expected.find(w.from)===null || expected.find(w.to)===null || expected.find(w.from)!==expected.find(w.to));
+            const missing=level.targetCircuit.filter(([a,b])=>actual.find(a)!==actual.find(b));
+            const bypassed=level.components.filter(c=>c.type!=='power' && actual.find(c.id.toUpperCase()+'_A')===actual.find(c.id.toUpperCase()+'_B'));
+            // This check ignores present switch positions: flag a latent short before closure.
+            const conductive=makeNets(nodes);
+            for(const w of connections) conductive.join(w.from,w.to);
+            for(const c of level.components) if(c.type==='switch') conductive.join(c.id.toUpperCase()+'_A',c.id.toUpperCase()+'_B');
+            return {correct:wrong.length===0&&missing.length===0,wrong,missing,bypassed,
+                potentialShort:conductive.find('BATT_POS')===conductive.find('BATT_NEG')};
+        }
+        function solveLinear(matrix, rhs) {
+            const a=matrix.map((row,i)=>[...row,rhs[i]]), n=a.length;
+            for(let col=0;col<n;col++) {
+                let pivot=col;
+                for(let row=col+1;row<n;row++) if(Math.abs(a[row][col])>Math.abs(a[pivot][col]))pivot=row;
+                if(Math.abs(a[pivot][col])<1e-12) throw new Error('Unresolved circuit node');
+                [a[col],a[pivot]]=[a[pivot],a[col]];
+                const scale=a[col][col];for(let j=col;j<=n;j++)a[col][j]/=scale;
+                for(let row=0;row<n;row++)if(row!==col){const factor=a[row][col];for(let j=col;j<=n;j++)a[row][j]-=factor*a[col][j];}
+            }
+            return a.map(row=>row[n]);
+        }
+        function solveDC(level, connections, states) {
+            const nodes=terminalsFor(level), nets=makeNets(nodes);
+            for(const w of connections) nets.join(w.from,w.to);
+            for(const c of level.components) if(c.type==='switch' && states[c.id]) nets.join(c.id.toUpperCase()+'_A',c.id.toUpperCase()+'_B');
+            const edges=[];
+            for(const c of level.components) {
+                if(c.type==='lamp') {
+                    edges.push({id:c.id,type:c.type,a:nets.find(c.id.toUpperCase()+'_A'),b:nets.find(c.id.toUpperCase()+'_B'),r:DC_MODEL.lampOhms});
+                }
+            }
+            const positive=nets.find('BATT_POS'),negative=nets.find('BATT_NEG');
+            // Norton equivalent of a 12 V source with 0.1 ohm series resistance.
+            const network=[...edges,{id:'source',a:positive,b:negative,r:DC_MODEL.sourceOhms}];
+            const adjacency=new Map([...new Set(nodes.map(n=>nets.find(n)))].map(n=>[n,[]]));
+            for(const e of network) {adjacency.get(e.a).push(e.b);adjacency.get(e.b).push(e.a);}
+            const reached=new Set([negative]),queue=[negative];
+            while(queue.length){for(const next of adjacency.get(queue.shift()))if(!reached.has(next)){reached.add(next);queue.push(next);}}
+            const unknown=[...reached].filter(n=>n!==negative), index=new Map(unknown.map((n,i)=>[n,i]));
+            const matrix=unknown.map(()=>unknown.map(()=>0)),rhs=unknown.map(()=>0);
+            for(const edge of network){
+                if(edge.a===edge.b||!reached.has(edge.a))continue;
+                const g=1/edge.r,i=index.get(edge.a),j=index.get(edge.b);
+                if(i!==undefined)matrix[i][i]+=g;
+                if(j!==undefined)matrix[j][j]+=g;
+                if(i!==undefined&&j!==undefined){matrix[i][j]-=g;matrix[j][i]-=g;}
+            }
+            if(positive!==negative) rhs[index.get(positive)]+=DC_MODEL.volts/DC_MODEL.sourceOhms;
+            const solution=solveLinear(matrix,rhs),voltages=new Map([[negative,0]]);
+            unknown.forEach((n,i)=>voltages.set(n,solution[i]));
+            const readings={};
+            for(const c of level.components)if(c.type==='lamp')readings[c.id]={volts:0,amps:0,watts:0};
+            for(const edge of edges){
+                // A completely floating passive network has no source: zero branch current.
+                const volts=reached.has(edge.a)?Math.abs((voltages.get(edge.a)||0)-(voltages.get(edge.b)||0)):0;
+                readings[edge.id]={volts,amps:volts/edge.r,watts:volts*volts/edge.r};
+            }
+            const terminalVolts=positive===negative?0:voltages.get(positive);
+            const sourceAmps=Math.max(0,(DC_MODEL.volts-terminalVolts)/DC_MODEL.sourceOhms);
+            const conducting=makeNets(nodes);
+            for(const w of connections)conducting.join(w.from,w.to);
+            for(const c of level.components)if((c.type==='switch')&&states[c.id])conducting.join(c.id.toUpperCase()+'_A',c.id.toUpperCase()+'_B');
+            return {sourceAmps,terminalVolts,readings,shorted:conducting.find('BATT_POS')===conducting.find('BATT_NEG')};
+        }
+        function simulateDC(level, connections, initialStates) {
+ const states={...initialStates};
+ return {...solveDC(level,connections,states),states};
+}
+        function terminalLabel(id) {
+            const [part,terminal]=id.split('_');
+            const comp=levels[currentLevelIndex].components.find(c=>c.id.toUpperCase()===part);
+            return (comp?.label || (part==='BATT'?'Supply':part))+' '+({POS:'+',NEG:'−',A:'In / T1',B:'Out / T2'}[terminal]||terminal);
+        }
+        function describeAudit(audit) {
+            const parts=[];
+            if(audit.wrong.length)parts.push('Remove or reconnect: '+audit.wrong.slice(0,3).map(w=>terminalLabel(w.from)+' ↔ '+terminalLabel(w.to)).join('; ')+'.');
+            if(audit.missing.length)parts.push('Missing connection'+(audit.missing.length===1?'':'s')+': '+audit.missing.slice(0,3).map(([a,b])=>terminalLabel(a)+' ↔ '+terminalLabel(b)).join('; ')+'.');
+            if(audit.bypassed.length)parts.push('Bypassed: '+audit.bypassed.map(c=>c.label||c.id).join(', ')+'.');
+            return parts.join(' ');
+        }
+
+        let autoAdvanceTimer = null;
+        let completionAnnounced = false;
+        function cancelAutoAdvance() {
+            if(autoAdvanceTimer!==null) clearTimeout(autoAdvanceTimer);
+            autoAdvanceTimer=null;
+        }
+        function updateAutomaticProgress() {
+ if(!gamePlaying||!lastCircuitResult?.passed){completionAnnounced=false;return;}
+ if(completionAnnounced||completedLevels.has(currentLevelIndex))return;
+ completionAnnounced=true;completedLevels.add(currentLevelIndex);saveLevelState();syncSavedLevel();
+ document.getElementById('wiringStatus').textContent='✓ Level verified';
+ showLessonResult();
+ }
+
+        function updateCircuitPhysics() {
+            const level=levels[currentLevelIndex];
+
+            document.getElementById('wiringStatusPanel').hidden=level.type==='quiz';
+            document.getElementById('nextLevelBtn').hidden=true;
+            if(level.type==='quiz') {
+                cancelAutoAdvance();
+                lastCircuitResult=null;
+                document.getElementById('totalCurrentMeter').innerText='—';
+                document.getElementById('circuitStateText').innerText='Theory mode';
+                document.getElementById('powerStatus').innerText='MODEL IDLE';
+                document.getElementById('liveVoltage').textContent='12.00 V source';document.getElementById('liveCurrent').textContent='0.000 A';document.getElementById('liveState').textContent='Quiz — no circuit connected';
+                return;
+            }
+            const audit=auditWiring(level,wires);
+            let result;
+            try {result=simulateDC(level,supplyEnabled?wires:[],componentStates);} catch(error) {
+                lastCircuitResult=null;
+                cancelAutoAdvance();completionAnnounced=false;
+                const status=document.getElementById('wiringStatus');status.textContent='⚠ Calculation unavailable — do not use this result';status.dataset.state='fault';
+                document.getElementById('wiringDetails').textContent=error.message;
+                document.getElementById('totalCurrentMeter').innerText='—';
+                return;
+            }
+            componentStates=result.states;
+
+            const off=level.components.filter(c=>c.type==='switch'&&!componentStates[c.id]);
+            for(const c of level.components) {
+                if(c.type==='lamp') {
+                    const reading=result.readings[c.id];
+                    setLampGlow(c.id,reading.watts/(DC_MODEL.volts*DC_MODEL.volts/DC_MODEL.lampOhms));
+                    const label=document.getElementById('reading_'+c.id);
+                    if(label)label.textContent=reading.volts.toFixed(2)+' V · '+reading.amps.toFixed(3)+' A';
+                }
+            }
+            const current=document.getElementById('totalCurrentMeter'),state=document.getElementById('circuitStateText');
+            current.innerText=result.sourceAmps.toFixed(3)+' A';
+            state.innerText=result.shorted?'SHORT CIRCUIT':result.sourceAmps>1e-6?'Current flowing':'No current';
+            state.className=result.shorted?'text-rose-400 font-bold':'text-amber-400 font-bold';
+            document.getElementById('powerStatus').innerText=result.shorted?'MODEL FAULT':'12 V DC MODEL';
+            document.getElementById('powerStatus').className=result.shorted?'text-rose-400':'text-emerald-400';
+            document.getElementById('multimeterReadout').textContent=result.terminalVolts.toFixed(2)+' V';
+            const status=document.getElementById('wiringStatus'),details=document.getElementById('wiringDetails');
+            let title,tone,detail;
+            if(result.shorted||audit.potentialShort){title=result.shorted?'✕ Short circuit — wiring incorrect':'✕ Short-circuit path — unsafe when switches close';tone='fault';detail=describeAudit(audit);}
+            else if(audit.wrong.length){title='✕ Incorrect wiring — '+audit.wrong.length+' unexpected connection(s)';tone='fault';detail=describeAudit(audit);}
+            else if(audit.missing.length){title='◷ Wiring incomplete — '+audit.missing.length+' connection(s) missing';tone='pending';detail=describeAudit(audit);}
+            else if(off.length){title='✓ Wiring correct — '+off.length+' switch(es) OFF';tone='correct';detail='Matches this lesson’s labeled connections. Turn all switches ON to complete the operating check.';}
+            else {title='✓ Wiring correct — operating check ready';tone='correct';detail='All required connections match and all switches are ON. A completion dialog opens after a successful operating check.';}
+            status.textContent=title;status.dataset.state=tone;details.textContent=detail;
+            lastCircuitResult={...result,audit,off,passed:supplyEnabled&&audit.correct&&!result.shorted&&!off.length};
+
+
+            refreshWireStates(level,audit,result);
+            if(!supplyEnabled){status.textContent='Supply OFF — current stopped';details.textContent='Turn the supply on when ready to test.';}
+            updateAutomaticProgress();syncSavedLevel();
+        }
+        function setLampGlow(lampId, intensity) {
+            const glow=document.getElementById('lamp_glow_'+lampId);
+            if(!glow)return;
+            const light=Math.max(0,Math.min(1,intensity));
+            glow.className='w-10 h-10 rounded-full border-2 flex items-center justify-center text-xl my-1';
+            glow.style.backgroundColor=light>1e-6?'rgba(251,191,36,'+(0.12+0.88*light)+')':'#0c0a09';
+            glow.style.borderColor=light>1e-6?'#fbbf24':'#44403c';
+            glow.style.boxShadow=light>1e-6?'0 0 '+(30*Math.sqrt(light))+'px rgba(251,191,36,'+light+')':'none';
+            glow.style.opacity=light>1e-6?String(0.45+0.55*Math.sqrt(light)):'0.35';
+        }
+        function verifyCircuit() {
+            if(levels[currentLevelIndex].type==='quiz')return;
+            updateCircuitPhysics();
+            if(!lastCircuitResult){showModal('Check unavailable','The circuit calculation could not be completed.');return;}
+            if(!lastCircuitResult.passed)showModal('Circuit not yet verified',document.getElementById('wiringStatus').textContent+'\n\n'+document.getElementById('wiringDetails').textContent);
+        }
+        function advanceVerifiedLevel() {
+            updateCircuitPhysics();
+            if(lastCircuitResult?.passed && currentLevelIndex<levels.length-1){closeModal();loadLevel(currentLevelIndex+1);}
+        }
+
+
+// Session progress is deliberately reset when this file is reopened.
+const completedLevels = new Set();
+let finalQuizPoints = 0;
+let supplyEnabled = true;
+
+let wireStates = new Map();
+function shuffleItems(items) {
+ for(let i=items.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[items[i],items[j]]=[items[j],items[i]];}return items;
+}
+shuffleItems(symbolQuizData);symbolQuizData.forEach(q=>shuffleItems(q.options));
+function allLessonsComplete(){return levels.every((_,i)=>completedLevels.has(i));}
+function wholeScore(){return finalQuizPoints + [...completedLevels].filter(i=>i>0).length*5;}
+function toggleSupply(){if(completedLevels.has(currentLevelIndex))return;supplyEnabled=!supplyEnabled;cancelWireStart();updateCircuitPhysics();}
+function calculateWireFlow(level,connections,states){
+ const edges=connections.map(w=>({a:w.from,b:w.to,r:0.001,id:w.id}));
+ for(const c of level.components){
+  if(c.type==='lamp'||((c.type==='switch')&&states[c.id]))edges.push({a:c.id.toUpperCase()+'_A',b:c.id.toUpperCase()+'_B',r:c.type==='lamp'?DC_MODEL.lampOhms:0.001});
+ }
+ edges.push({a:'BATT_POS',b:'BATT_NEG',r:DC_MODEL.sourceOhms});
+ const connected=new Set(['BATT_NEG']);let changed=true;
+ while(changed){changed=false;for(const e of edges)if(connected.has(e.a)!==connected.has(e.b)){connected.add(e.a);connected.add(e.b);changed=true;}}
+ const nodes=[...connected].filter(n=>n!=='BATT_NEG'), ix=new Map(nodes.map((n,i)=>[n,i]));
+ const m=nodes.map(()=>nodes.map(()=>0)),rhs=nodes.map(()=>0);
+ for(const e of edges){if(!connected.has(e.a))continue;const a=ix.get(e.a),b=ix.get(e.b),g=1/e.r;if(a!==undefined)m[a][a]+=g;if(b!==undefined)m[b][b]+=g;if(a!==undefined&&b!==undefined){m[a][b]-=g;m[b][a]-=g;}}
+ rhs[ix.get('BATT_POS')]+=DC_MODEL.volts/DC_MODEL.sourceOhms;
+ const values=solveLinear(m,rhs),v=n=>n==='BATT_NEG'?0:(values[ix.get(n)]||0);
+ return new Map(connections.map(w=>[w.id,Math.abs(v(w.from)-v(w.to))/0.001]));
+}
+function refreshWireStates(level,audit,result){
+ wireStates=new Map();
+ const negative=makeNets(terminalsFor(level));
+ for(const pair of level.targetCircuit)negative.join(...pair);
+ for(const c of level.components)if(c.type==='switch')negative.join(c.id.toUpperCase()+'_A',c.id.toUpperCase()+'_B');
+ let flow=new Map();
+ if(supplyEnabled){try{flow=calculateWireFlow(level,wires,componentStates);}catch(error){}}
+ for(const w of wires){
+  const wrong=audit.wrong.includes(w),active=(flow.get(w.id)||0)>0.00001;
+  const returnWire=negative.find(w.from)===negative.find('BATT_NEG');
+  wireStates.set(w.id,{color:wrong?'yellow':!active?'blue':returnWire?'black':'red',active:active&&!wrong,label:wrong?'Warning — incorrect connection':!active?'No current — signal blue':returnWire?'Negative return — current flowing':'Positive feed — current flowing'});
+ }
+ renderWires();
+ const ready=supplyEnabled;
+ document.getElementById('liveVoltage').textContent=(ready?result.terminalVolts:0).toFixed(2)+' V';
+ document.getElementById('liveCurrent').textContent=(ready?result.sourceAmps:0).toFixed(3)+' A';
+ document.getElementById('liveState').textContent=!supplyEnabled?'Supply OFF':result.sourceAmps>1e-6?'Current flowing':'No current';
+ document.getElementById('supplyButton').textContent=supplyEnabled?'Stop current':'Turn supply on';
+ document.getElementById('supplyButton').setAttribute('aria-pressed',String(supplyEnabled));
+}
+function openLessonReflection(){
+ cancelAutoAdvance();
+ const finished=allLessonsComplete();
+ document.getElementById('certificateReflectionButton').hidden=!finished;
+ document.getElementById('resultTitle').textContent=finished?'Congratulations!':'Level completed';
+ document.getElementById('finalScore').hidden=!finished;
+ document.getElementById('finalScore').textContent=finished?'Total score: '+wholeScore()+' / 55':'';
+ document.getElementById('resultProgress').textContent=completedLevels.size+' of '+levels.length+' levels completed';
+ document.getElementById('understandAnswer').value='';
+ document.getElementById('resultContinue').disabled=true;
+ document.getElementById('resultContinue').textContent=finished?'Continue practice':'Continue level';
+ const select=document.getElementById('resultLevel');select.innerHTML='';
+ levels.forEach((l,i)=>{const o=document.createElement('option');o.value=i;o.textContent=l.title+(completedLevels.has(i)?' ✓':'');select.appendChild(o);});select.value=currentLevelIndex;
+ document.getElementById('lessonResult').hidden=false;
+ document.getElementById('understandAnswer').focus();
+
+}
+
+let celebrationTimer=null;
+let celebrationLevel=null;
+let correctToastTimer=null;
+function cancelCelebration(){
+ if(celebrationTimer!==null)clearTimeout(celebrationTimer);
+ celebrationTimer=null;celebrationLevel=null;
+ document.getElementById('celebrationOverlay').hidden=true;
+ document.getElementById('celebrationParticles').replaceChildren();
+ if(correctToastTimer!==null)clearTimeout(correctToastTimer);
+ correctToastTimer=null;document.getElementById('correctToast').hidden=true;
+}
+function playCelebrationSound(short=false){
+ if(!isSFXEnabled)return;
+ try{
+  AudioEngine.init();const ctx=AudioEngine.ctx;
+  if(ctx.state==='suspended')ctx.resume().catch(()=>{});
+  const now=ctx.currentTime;
+  const notes=short?[659.25,1046.5,1318.51]:[523.25,659.25,783.99,1046.5,783.99,1046.5,1318.51,1567.98];
+  notes.forEach((frequency,i)=>{
+   const oscillator=ctx.createOscillator(),gain=ctx.createGain();
+   const start=now+i*(short?.075:.11),duration=short?.2:.42;
+   oscillator.type='triangle';oscillator.frequency.setValueAtTime(frequency,start);
+   gain.gain.setValueAtTime(.001,start);gain.gain.linearRampToValueAtTime(.16,start+.015);gain.gain.exponentialRampToValueAtTime(.001,start+duration);
+   oscillator.connect(gain);gain.connect(AudioEngine.sfxBus);
+   oscillator.onended=()=>{oscillator.disconnect();gain.disconnect();};oscillator.start(start);oscillator.stop(start+duration);
+  });
+ }catch(error){/* Completion remains available when audio is unsupported. */}
+}
+function celebrateCorrectAnswer(){
+ playCelebrationSound(true);
+ const toast=document.getElementById('correctToast');toast.hidden=false;
+ if(correctToastTimer!==null)clearTimeout(correctToastTimer);
+ correctToastTimer=setTimeout(()=>{toast.hidden=true;correctToastTimer=null;},900);
+}
+function showLessonResult(){
+ if(!document.getElementById('celebrationOverlay').hidden)return;
+ const gameComplete=allLessonsComplete();
+ document.getElementById('certificateCelebrationButton').hidden=!gameComplete;
+ cancelAutoAdvance();
+ document.getElementById('lessonResult').hidden=true;
+ celebrationLevel=currentLevelIndex;
+ const overlay=document.getElementById('celebrationOverlay');
+ document.getElementById('celebrationTitle').textContent=gameComplete?'Congratulations!':currentLevelIndex===0?'Quiz completed!':'Circuit complete!';
+ const score=document.getElementById('celebrationTotalScore');score.hidden=!gameComplete;score.textContent=gameComplete?'Your total score: '+wholeScore()+' / 55':'';
+ document.getElementById('celebrationNext').textContent=gameComplete?'Continue to reflection':'Continue to question';
+ document.getElementById('celebrationCaption').textContent=gameComplete?'You finished all 10 levels — great effort!':'Level '+(currentLevelIndex+1)+' completed — great work!';
+ const particles=document.getElementById('celebrationParticles');particles.replaceChildren();
+ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  for(let i=0;i<48;i++){const p=document.createElement('i');p.style.setProperty('--x',Math.random()*100+'%');p.style.setProperty('--drift',(Math.random()-.5)*220+'px');p.style.setProperty('--delay',Math.random()*.6+'s');p.style.backgroundColor=['#fbbf24','#34d399','#38bdf8','#fb7185','#c4b5fd'][i%5];particles.appendChild(p);}
+ }
+ overlay.hidden=false;document.getElementById('celebrationNext').focus();playCelebrationSound();
+ celebrationTimer=gameComplete?null:setTimeout(finishCelebration,2400);
+}
+function finishCelebration(){
+ const level=celebrationLevel;
+ cancelCelebration();
+ if(level===currentLevelIndex&&gamePlaying)openLessonReflection();
+}
+
+function closeLessonResult(){document.getElementById('lessonResult').hidden=true;}
+
+// Keep each level's state for the current game session.
+const levelSnapshots=new Map();
+const quizResponses=new Map();
+let levelLoaded=false;
+function saveLevelState(){
+ if(!levelLoaded)return;
+ levelSnapshots.set(currentLevelIndex,{wires:JSON.parse(JSON.stringify(wires)),states:{...componentStates},supplyEnabled,quizCurrentQuestion,quizScore});
+}
+function syncSavedLevel(){
+ syncVisibleLevelNavigation();
+ const done=completedLevels.has(currentLevelIndex);
+ document.getElementById('certificateToolbarButton').hidden=!allLessonsComplete();
+ const banner=document.getElementById('savedLevelStatus');
+ banner.textContent=done?'✓ Level '+(currentLevelIndex+1)+' completed · Score: '+(currentLevelIndex===0?finalQuizPoints:5)+' / '+(currentLevelIndex===0?10:5)+' · Answers saved for review':'Your work stays here when you visit another level.';
+ document.getElementById('stayNextLevel').hidden=!done||allLessonsComplete();
+ for(const selector of ['.terminal-node','[id^="sw_btn_"]','#deleteWireBtn','#autoRouteBtn','#supplyButton'])document.querySelectorAll(selector).forEach(el=>{if(done)el.disabled=true;else if(selector==='.terminal-node'||selector==='[id^="sw_btn_"]'||selector==='#supplyButton')el.disabled=false;});
+ document.getElementById('wiringWorkspace').classList.toggle('completed-board',done);
+}
+function nextChosenLevel(){
+ let next=levels.findIndex((_,i)=>i>currentLevelIndex&&!completedLevels.has(i));
+ if(next<0)next=levels.findIndex((_,i)=>!completedLevels.has(i));
+ if(next>=0)loadLevel(next);
+}
+function stayOnLevel(){closeLessonResult();syncSavedLevel();}
+function nextQuizQuestion(){
+ if(!quizResponses.has(symbolQuizData[quizCurrentQuestion]?.id))return;
+ if(quizCurrentQuestion<symbolQuizData.length-1)quizCurrentQuestion++;
+ renderQuizQuestion();saveLevelState();
+}
+let savedQuizPage=0;
+function renderSavedQuiz(page=0){
+ savedQuizPage=Math.max(0,Math.min(Math.ceil(symbolQuizData.length/3)-1,page));
+ const grid=document.getElementById('quizOptionsGrid');grid.replaceChildren();
+ document.getElementById('quizSymbolSvg').innerHTML='';
+ document.getElementById('quizProgress').textContent='All answers saved';
+ document.getElementById('quizFeedback').textContent='Review your saved answers. Choose Continue level when ready.';
+ symbolQuizData.slice(savedQuizPage*3,savedQuizPage*3+3).forEach((q,j)=>{
+  const row=document.createElement('div');row.className='saved-answer';const a=quizResponses.get(q.id);
+  row.textContent=(savedQuizPage*3+j+1)+'. Your answer: '+a+' — '+(a===q.name?'Correct':'Correct answer: '+q.name);grid.appendChild(row);
+ });
+ let pager=document.getElementById('quizReviewPager');if(!pager){pager=document.createElement('div');pager.id='quizReviewPager';document.getElementById('quizCard').appendChild(pager);}
+ pager.replaceChildren();
+ const previous=document.createElement('button');previous.type='button';previous.textContent='Previous answers';previous.disabled=savedQuizPage===0;previous.onclick=()=>renderSavedQuiz(savedQuizPage-1);
+ const count=document.createElement('span');count.textContent=(savedQuizPage+1)+' / '+Math.ceil(symbolQuizData.length/3);
+ const next=document.createElement('button');next.type='button';next.textContent='Next answers';next.disabled=savedQuizPage>=Math.ceil(symbolQuizData.length/3)-1;next.onclick=()=>renderSavedQuiz(savedQuizPage+1);
+ pager.append(previous,count,next);document.getElementById('quizNextQuestion').hidden=true;
+}
+
+function continueLesson(){
+ if(!document.getElementById('understandAnswer').value)return;
+ closeLessonResult();
+ if(allLessonsComplete()){loadLevel(currentLevelIndex);return;}
+ let next=levels.findIndex((_,i)=>i>currentLevelIndex&&!completedLevels.has(i));
+ if(next<0)next=levels.findIndex((_,i)=>!completedLevels.has(i));
+ loadLevel(next);
+}
+function chooseResultLevel(){const i=Number(document.getElementById('resultLevel').value);closeLessonResult();loadLevel(i);}
+function exitLesson(){closeLessonResult();showMainMenu();}
+
+
+let levelsPanelOpen=true;
+let instructionsPanelOpen=!window.matchMedia('(max-width:1100px) and (max-height:600px), (max-width:760px)').matches;
+function syncWorkspacePanels(){
+ document.body.classList.toggle('levels-panel-hidden',!levelsPanelOpen);
+ document.body.classList.toggle('instructions-panel-hidden',!instructionsPanelOpen);
+ document.body.classList.toggle('phone-help-open',instructionsPanelOpen);
+ const levelsButton=document.getElementById('levelPanelToggle');
+ levelsButton.textContent=levelsPanelOpen?'◀ Hide levels':'▶ Show levels';levelsButton.setAttribute('aria-expanded',String(levelsPanelOpen));
+ const instructionsButton=document.getElementById('instructionPanelToggle');
+ instructionsButton.textContent=instructionsPanelOpen?'▲ Hide instructions':'▼ Show instructions';instructionsButton.setAttribute('aria-expanded',String(instructionsPanelOpen));
+ document.getElementById('phoneHelpBtn').setAttribute('aria-expanded',String(instructionsPanelOpen));
+ document.getElementById('levelSidebar').inert=!levelsPanelOpen;
+ if(levels[currentLevelIndex].type!=='quiz')requestAnimationFrame(()=>{layoutBoard();syncSavedLevel();});
+}
+function toggleLevelPanel(){levelsPanelOpen=!levelsPanelOpen;syncWorkspacePanels();}
+function toggleInstructionPanel(){instructionsPanelOpen=!instructionsPanelOpen;syncWorkspacePanels();}
+document.addEventListener('DOMContentLoaded',syncWorkspacePanels);
+
+
+const CERTIFICATE_LOGO='';
+let certificateURL=null;
+let certificateDate=null;
+let certificateGeneration=0;
+function certificateEscape(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));}
+function openCertificate(){
+ if(!allLessonsComplete())return;
+ cancelCelebration();closeLessonResult();
+ document.getElementById('certificateDialog').hidden=false;
+ document.getElementById('certificateName').focus();
+}
+function closeCertificate(){document.getElementById('certificateDialog').hidden=true;}
+function invalidateCertificate(){
+ certificateGeneration++;
+ document.getElementById('certificateDownload').hidden=true;
+ document.getElementById('certificatePreview').hidden=true;
+ document.getElementById('certificateMessage').textContent='';
+ if(certificateURL){URL.revokeObjectURL(certificateURL);certificateURL=null;}
+}
+function certificateSVG(name,date,score){
+ const fontSize=Math.min(58,1050/Math.max(name.length,1)*1.65);
+ return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1130" viewBox="0 0 1600 1130">'+
+ '<rect width="1600" height="1130" fill="#fffdf7"/><rect x="35" y="35" width="1530" height="1060" fill="none" stroke="#861c30" stroke-width="12"/><rect x="58" y="58" width="1484" height="1014" fill="none" stroke="#b49a60" stroke-width="2"/>'+
+ (CERTIFICATE_LOGO?'<image x="715" y="85" width="170" height="170" xlink:href="'+CERTIFICATE_LOGO+'"/>':'<text x="800" y="195" text-anchor="middle" fill="#861c30" font-family="Georgia,serif" font-size="28" letter-spacing="5">CIRCUIT CRAFT</text>')+
+ '<g text-anchor="middle" fill="#252525" font-family="Georgia,serif"><text x="800" y="310" font-size="36" font-weight="bold">TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES</text><text x="800" y="350" font-size="26">Manila</text>'+
+ '<text x="800" y="460" fill="#861c30" font-size="62" font-weight="bold">Certificate of Participation</text><text x="800" y="530" font-size="26">This certificate recognizes</text>'+
+ '<text x="800" y="620" font-size="'+fontSize+'" font-weight="bold">'+certificateEscape(name)+'</text><path d="M270 650H1330" stroke="#b49a60"/>'+
+ '<text x="800" y="715" font-size="28">for participating in and completing all 10 levels of</text><text x="800" y="765" font-size="34" font-weight="bold">Circuit Craft Electrical Wiring Simulation</text>'+
+ '<text x="800" y="845" font-size="28">Total score: '+score+' / 55</text><text x="800" y="895" font-size="26">Completed on '+certificateEscape(date)+'</text>'+
+ '<text x="800" y="985" font-family="Arial,sans-serif" font-size="20">Generated by Circuit Craft for this learning activity.</text><text x="800" y="1020" font-family="Arial,sans-serif" font-size="18">Participation record only — not university-issued certification or authorization for electrical work.</text></g></svg>';
+}
+async function prepareCertificate(event){
+ event.preventDefault();if(!allLessonsComplete())return;
+ const field=document.getElementById('certificateName');
+ const name=field.value.trim().replace(/\s+/g,' ');
+ if(!name){field.setCustomValidity('Please enter your name.');field.reportValidity();return;}
+ field.setCustomValidity('');invalidateCertificate();const generation=certificateGeneration;
+ if(!certificateDate)certificateDate=new Date().toLocaleDateString('en-PH',{timeZone:'Asia/Manila',year:'numeric',month:'long',day:'numeric'});
+ const svg=certificateSVG(name,certificateDate,wholeScore());
+ let blob=new Blob([svg],{type:'image/svg+xml'}),extension='svg';
+ const temp=URL.createObjectURL(blob);
+ document.getElementById('certificateMessage').textContent='Preparing your certificate…';
+ try{
+  const picture=new Image();await new Promise((resolve,reject)=>{picture.onload=resolve;picture.onerror=reject;picture.src=temp;});
+  const canvas=document.createElement('canvas');canvas.width=1600;canvas.height=1130;
+  canvas.getContext('2d').drawImage(picture,0,0);
+  const png=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+  if(png){blob=png;extension='png';}
+ }catch(error){/* SVG remains a downloadable, printable fallback. */}finally{URL.revokeObjectURL(temp);}
+ if(generation!==certificateGeneration)return;
+ certificateURL=URL.createObjectURL(blob);
+ const link=document.getElementById('certificateDownload');link.href=certificateURL;
+ link.download='CircuitCraft-Participation-'+name.replace(/[^a-z0-9_-]/gi,'_').slice(0,60)+'.'+extension;
+ link.textContent='Download certificate ('+extension.toUpperCase()+')';link.hidden=false;
+ const preview=document.getElementById('certificatePreview');preview.src=certificateURL;preview.hidden=false;
+ document.getElementById('certificateMessage').textContent='Your certificate is ready. On a phone, you can also open or save the preview.';
+}
+
+
+const postProblems=[
+  {
+    "title": "Open return wire",
+    "situation": "Both series lamps are dark. The supply is on and the switch is closed. Lamp 2 has no connection back to supply negative.",
+    "diagram": "Supply + → Switch → Lamp 1 → Lamp 2 → GAP → Supply −",
+    "options": [
+      "Connect Lamp 2 to the missing negative return.",
+      "Connect supply + directly to supply −.",
+      "Open the switch.",
+      "Bridge both lamps with a wire."
+    ],
+    "answer": 0,
+    "why": "The missing return creates an open circuit. Completing the return allows current through the lamps."
+  },
+  {
+    "title": "A short circuit",
+    "situation": "An added wire joins the positive and negative supply terminals directly. Which connection causes the fault?",
+    "diagram": "Supply + → added wire → Supply −",
+    "options": [
+      "The normal return after a lamp.",
+      "The direct wire between the supply terminals.",
+      "The closed switch in series with a lamp.",
+      "The connection between two series lamps."
+    ],
+    "answer": 1,
+    "why": "The added wire bypasses the loads and creates a very low-resistance path. Stop the simulated supply and remove that wire before testing again."
+  },
+  {
+    "title": "The switch cannot turn the lamp off",
+    "situation": "A lamp stays on with its switch open. An extra wire connects the two switch terminals. What is wrong?",
+    "diagram": "Switch input → open switch → output; an extra wire also joins input to output",
+    "options": [
+      "The extra wire bypasses the switch.",
+      "An open switch always conducts.",
+      "A closed switch increases the supply voltage.",
+      "The lamp needs a second return."
+    ],
+    "answer": 0,
+    "why": "The extra wire provides a path around the open switch. Remove that bypass in the isolated simulator to restore switch control."
+  },
+  {
+    "title": "One parallel branch is dark",
+    "situation": "Lamp 1 lights, but Lamp 2 is off. Each has an independent parallel branch. Lamp 2’s switch is open. Why is Lamp 2 off?",
+    "diagram": "Branch 1: closed switch → Lamp 1; Branch 2: open switch → Lamp 2",
+    "options": [
+      "Lamp 1 uses all the voltage.",
+      "Parallel branches must operate together.",
+      "The open switch interrupts branch 2.",
+      "The return should be disconnected."
+    ],
+    "answer": 2,
+    "why": "The open switch interrupts only its branch. The other parallel branch can still carry current."
+  },
+  {
+    "title": "A bypassed series lamp",
+    "situation": "Two lamps should be connected in series. Lamp 1 is dark and Lamp 2 is brighter than expected. An extra wire joins Lamp 1 terminals directly. What is the problem?",
+    "diagram": "Supply + → Switch → Lamp 1 → Lamp 2 → Supply −; an extra wire joins Lamp 1 terminals",
+    "options": [
+      "The lamps must have separate supplies.",
+      "Opening the switch will make both lamps brighter.",
+      "The negative return must be removed.",
+      "The extra wire bypasses Lamp 1."
+    ],
+    "answer": 3,
+    "why": "The extra wire gives current a path around Lamp 1, leaving almost no voltage across that lamp. Stop the simulated supply and remove the extra wire to restore the series path."
+  }
+];
+let postUnlocked=false,postStarted=false,postIndex=0;
+const postAnswers=Array(5).fill(null);
+function postDone(){return postAnswers.every(a=>a!==null);}
+function postScore(){return postAnswers.reduce((n,a,i)=>n+(a===postProblems[i].answer?1:0),0);}
+function afterCertificateDownload(){
+ if(!allLessonsComplete()||!certificateURL)return;
+ postUnlocked=true;document.getElementById('postToolbar').hidden=false;
+ setTimeout(openPostProblems,350);
+}
+function openPostProblems(){
+ if(!postUnlocked||!allLessonsComplete())return;
+ closeCertificate();document.getElementById('postDialog').hidden=false;
+ if(postDone())renderPostSummary();else renderPostProblem();
+ document.getElementById('postTitle').focus();
+}
+function closePostProblems(){document.getElementById('postDialog').hidden=true;document.getElementById('postToolbar').focus();}
+function startPostProblems(){if(!postUnlocked)return;postStarted=true;renderPostProblem();}
+function renderPostProblem(){
+ document.getElementById('postIntro').hidden=postStarted;
+ document.getElementById('postQuestion').hidden=!postStarted;
+ document.getElementById('postSummary').hidden=true;
+ if(!postStarted)return;
+ const q=postProblems[postIndex],a=postAnswers[postIndex];
+ document.getElementById('postProgress').textContent='Problem '+(postIndex+1)+' of 5';
+ document.getElementById('postHeading').textContent=q.title;
+ document.getElementById('postSituation').textContent=q.situation;
+ document.getElementById('postDiagram').textContent=q.diagram;
+ const options=document.getElementById('postOptions');options.replaceChildren();
+ q.options.forEach((text,i)=>{const b=document.createElement('button');b.textContent=text;b.disabled=a!==null;b.setAttribute('aria-pressed',String(a===i));if(a===i)b.className='post-chosen';b.onclick=()=>answerPostProblem(i);options.appendChild(b);});
+ document.getElementById('postFeedback').textContent=a===null?'Choose one answer. Your answer will be saved.':(a===q.answer?'Correct. ':'Correct answer: '+q.options[q.answer]+' ')+q.why;
+ document.getElementById('postPrevious').disabled=postIndex===0;
+ document.getElementById('postNext').disabled=a===null;
+ document.getElementById('postNext').textContent=postIndex===4?'See post-test score':'Next problem';
+}
+function answerPostProblem(i){
+ if(!postUnlocked||!postStarted||postAnswers[postIndex]!==null||!Number.isInteger(i)||i<0||i>3)return;
+ postAnswers[postIndex]=i;if(i===postProblems[postIndex].answer)playCelebrationSound(true);renderPostProblem();
+}
+function movePostProblem(step){
+ if(!postStarted)return;
+ if(step===1&&postAnswers[postIndex]===null)return;
+ if(step===1&&postIndex===4){if(postDone())renderPostSummary();return;}
+ postIndex=Math.max(0,Math.min(4,postIndex+step));renderPostProblem();
+}
+function renderPostSummary(){
+ if(!postDone())return;
+ document.getElementById('postIntro').hidden=true;document.getElementById('postQuestion').hidden=true;document.getElementById('postSummary').hidden=false;
+ document.getElementById('postScore').textContent='Post-test score: '+postScore()+' / 5';
+ const review=document.getElementById('postReview');review.replaceChildren();
+ postProblems.forEach((q,i)=>{const p=document.createElement('p');p.textContent=(i+1)+'. '+q.title+' — '+(postAnswers[i]===q.answer?'Correct':'Review needed')+'. Your answer: '+q.options[postAnswers[i]];review.appendChild(p);});
+}
+function reviewPostProblems(){postIndex=0;renderPostProblem();}
+
+
+        /* CONFETTI ANIMATION */
+        function triggerConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+
+            const particles = [];
+            const colors = ['#ef4444', '#3b82f6', '#f59e0b', '#10b981', '#ec4899'];
+
+            for (let i = 0; i < 70; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 12,
+                    vy: (Math.random() - 0.8) * 12,
+                    size: Math.random() * 6 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)]
+                });
+            }
+
+            function render() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.2;
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    if (p.y < canvas.height) alive = true;
+                });
+                if (alive) requestAnimationFrame(render);
+            }
+            render();
+        }
+
+        function showModal(title, text) {
+            document.getElementById('nextLevelBtn').hidden=true;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerText = text;
+            document.getElementById('feedbackModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            AudioEngine.playClick();
+            document.getElementById('feedbackModal').classList.add('hidden');
+        }
+    </script>
+<script>
+// Keep the active colour visible without relying on hover or tiny borders.
+const wirePalette = document.getElementById('wireColorPicker');
+function togglePhoneTools() {
+ const open=document.body.classList.toggle('phone-tools-open');
+ document.getElementById('phoneToolsBtn').setAttribute('aria-expanded',String(open));
+}
+function syncWirePalette() {
+ wirePalette.querySelectorAll('button').forEach(button => {
+  button.setAttribute('aria-pressed', String(button.id === 'colorBtn_' + selectedWireColor));
+ });
+}
+wirePalette.addEventListener('click', syncWirePalette);
+syncWirePalette();
+// Older Safari releases use the visible viewport as a fallback for dynamic vh.
+if (!CSS.supports('height', '100dvh')) {
+ const fitVisibleViewport = () => document.body.style.setProperty('height', window.innerHeight + 'px', 'important');
+ window.addEventListener('resize', fitVisibleViewport, {passive:true});
+ fitVisibleViewport();
+}
+</script>
+<script id="deviceFitRuntime">
+(function(){
+ 'use strict';
+ let pending=0,helpIndex=0;const helpPages=[];
+ function fitBox(element,parent){
+  if(!element||!parent||!element.getClientRects().length)return;
+  element.style.transform='none';
+  const css=getComputedStyle(parent);
+  const width=Math.max(1,parent.clientWidth-parseFloat(css.paddingLeft||0)-parseFloat(css.paddingRight||0)-4);
+  const height=Math.max(1,parent.clientHeight-parseFloat(css.paddingTop||0)-parseFloat(css.paddingBottom||0)-4);
+  const actualWidth=Math.max(element.offsetWidth,element.scrollWidth);
+  const actualHeight=Math.max(element.offsetHeight,element.scrollHeight);
+  const scale=Math.min(1,width/Math.max(1,actualWidth),height/Math.max(1,actualHeight));
+  element.style.transform='scale('+Math.max(.0001,scale)+')';
+ }
+ function fitViewport(){
+  pending=0;
+  const v=window.visualViewport;
+  const height=Math.max(1,Math.floor(v?v.height:window.innerHeight));
+  document.documentElement.style.setProperty('--app-vh',height+'px');
+  document.body.style.setProperty('height',height+'px','important');
+  const chrome=document.getElementById('chromeContent'),frame=document.getElementById('chromeViewport');
+  if(chrome&&frame&&document.body.dataset.screen==='game'){
+   chrome.style.width=frame.clientWidth+'px';chrome.style.transform='none';
+   const natural=Math.max(chrome.scrollHeight,chrome.offsetHeight);
+   const landscape=window.innerWidth>height&&height<520;
+   const share=landscape?(instructionsPanelOpen ? 0.48 : 0.34):(instructionsPanelOpen ? 0.48 : 0.38);
+   const scale=Math.min(1,(height*share)/Math.max(1,natural));
+   chrome.style.transform='scale('+scale+')';
+   // Expand the unscaled width so small screens use the full available row.
+   if(scale<1){chrome.style.width=(frame.clientWidth/scale)+'px';}
+   const fittedHeight=Math.max(chrome.offsetHeight,chrome.scrollHeight)*scale;
+   frame.style.height=Math.ceil(fittedHeight)+'px';
+  }
+  fitBox(document.querySelector('.menu-shell'),document.getElementById('startScreen'));
+  fitBox(document.getElementById('quizCard'),document.getElementById('quizViewContainer'));
+  for(const [outer,inner] of [['lessonResult','.result-card'],['certificateDialog','.certificate-card'],['postDialog','.post-card'],['feedbackModal',':scope > div'],['celebrationOverlay','.celebration-card'],['deviceHelpDialog','.device-help-card']]){
+   const parent=document.getElementById(outer);if(parent)fitBox(parent.querySelector(inner),parent);
+  }
+  if(typeof levels!=='undefined'&&levels[currentLevelIndex].type!=='quiz'&&document.body.dataset.screen==='game')layoutBoard();
+ }
+ function schedule(){if(!pending)pending=requestAnimationFrame(fitViewport);}
+ function showHelpPage(){
+  const body=document.getElementById('deviceHelpBody');body.textContent=helpPages[helpIndex]||'';
+  document.getElementById('deviceHelpCount').textContent=(helpIndex+1)+' / '+helpPages.length;
+  document.getElementById('deviceHelpPrevious').disabled=helpIndex===0;
+  document.getElementById('deviceHelpNext').disabled=helpIndex===helpPages.length-1;
+  schedule();
+ }
+ function openModelHelp(event){
+  if(event)event.preventDefault();helpPages.length=0;
+  const description=document.getElementById('taskDesc').textContent;if(description)helpPages.push(description);
+  for(const paragraph of document.querySelectorAll('#modelNotes p'))helpPages.push(paragraph.textContent);
+  helpIndex=0;document.getElementById('deviceHelpDialog').hidden=false;showHelpPage();
+  document.getElementById('deviceHelpClose').focus();
+ }
+ function ready(){
+  const app=document.getElementById('appViewport');
+  const frame=document.createElement('div');frame.id='chromeViewport';
+  const chrome=document.createElement('div');chrome.id='chromeContent';frame.appendChild(chrome);
+  document.body.insertBefore(frame,app);
+  for(const id of ['phoneNavigation'])chrome.appendChild(document.getElementById(id));
+  chrome.appendChild(document.querySelector('header'));
+  for(const id of ['panelControls','liveBar','wireLegend','savedLevelBar','objectivePanel','wiringStatusPanel','boardTools'])chrome.appendChild(document.getElementById(id));
+  document.getElementById('levelPanelToggle').textContent=levelsPanelOpen?'Hide levels':'Show levels';
+  const overlay=document.createElement('div');overlay.id='deviceHelpDialog';overlay.hidden=true;overlay.setAttribute('role','dialog');overlay.setAttribute('aria-modal','true');overlay.setAttribute('aria-labelledby','deviceHelpTitle');
+  overlay.innerHTML='<section class="device-help-card"><h2 id="deviceHelpTitle">Model and lesson notes</h2><p id="deviceHelpBody"></p><div class="device-help-actions"><button id="deviceHelpPrevious" type="button">Previous</button><span id="deviceHelpCount"></span><button id="deviceHelpNext" type="button">Next</button></div><div class="device-help-actions"><button id="deviceHelpClose" type="button">Back to circuit</button></div></section>';
+  document.body.appendChild(overlay);
+  document.getElementById('deviceHelpPrevious').onclick=()=>{if(helpIndex>0){helpIndex--;showHelpPage();}};
+  document.getElementById('deviceHelpNext').onclick=()=>{if(helpIndex<helpPages.length-1){helpIndex++;showHelpPage();}};
+  document.getElementById('deviceHelpClose').onclick=()=>{overlay.hidden=true;document.querySelector('#modelNotes summary').focus();};
+  document.querySelector('#modelNotes summary').addEventListener('click',openModelHelp);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!overlay.hidden)overlay.hidden=true;});
+  const observer=new MutationObserver(records=>{
+   if(records.some(r=>!(r.target.nodeType===1?r.target:r.target.parentElement)?.closest('#boardSurface,#celebrationParticles')))schedule();
+  });
+  observer.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['hidden','class','open','data-screen','data-mode']});
+  if(window.ResizeObserver){const resizer=new ResizeObserver(schedule);resizer.observe(document.body);resizer.observe(chrome);}
+  window.addEventListener('resize',schedule,{passive:true});window.addEventListener('orientationchange',schedule,{passive:true});
+  if(window.visualViewport){window.visualViewport.addEventListener('resize',schedule,{passive:true});window.visualViewport.addEventListener('scroll',schedule,{passive:true});}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(schedule);
+  schedule();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();
+})();
+</script><script id="visibleLevelRuntime">
+function syncVisibleLevelNavigation(){
+ const title=document.getElementById('currentLessonTitle');
+ if(!title)return;
+ const level=levels[currentLevelIndex];
+ if(title.textContent!==level.title)title.textContent=level.title;
+ const status=document.getElementById('currentLessonState');
+ const statusText=completedLevels.has(currentLevelIndex)?'Completed ✓':'In progress';
+ if(status.textContent!==statusText)status.textContent=statusText;
+ const chooser=document.getElementById('phoneLevelSelect');if(chooser)chooser.value=String(currentLevelIndex);
+ document.querySelectorAll('#levelChoiceButtons button').forEach((button,index)=>{
+  const selected=index===currentLevelIndex,done=completedLevels.has(index);
+  if(selected){if(button.getAttribute('aria-current')!=='step')button.setAttribute('aria-current','step');}
+  else if(button.hasAttribute('aria-current'))button.removeAttribute('aria-current');
+  if(button.dataset.complete!==String(done))button.dataset.complete=String(done);
+  const label=(index+1)+(done?' ✓':'');
+  if(button.textContent!==label)button.textContent=label;
+  const accessible=levels[index].title+(selected?' — selected':'')+(done?' — completed':'');
+  if(button.getAttribute('aria-label')!==accessible)button.setAttribute('aria-label',accessible);
+ });
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ const navigation=document.getElementById('phoneNavigation');
+ const current=document.createElement('section');current.id='currentLessonBar';current.setAttribute('aria-label','Selected level');
+ const title=document.createElement('strong');title.id='currentLessonTitle';title.setAttribute('aria-live','polite');
+ const status=document.createElement('span');status.id='currentLessonState';current.append(title,status);
+ navigation.parentNode.insertBefore(current,navigation);
+ const buttons=document.createElement('div');buttons.id='levelChoiceButtons';buttons.setAttribute('role','group');buttons.setAttribute('aria-label','Choose level');
+ levels.forEach((level,index)=>{const button=document.createElement('button');button.type='button';button.title=level.title;button.onclick=()=>loadLevel(index);buttons.appendChild(button);});
+ navigation.appendChild(buttons);syncVisibleLevelNavigation();
+});
+</script></body>
 </html>
