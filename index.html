@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Circuit Craft: Electrical Simulator & Vocational Trainer</title>
+    <!-- Styles are bundled for offline use. -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+<body data-screen="menu" class="flex flex-col h-screen w-screen overflow-hidden bg-stone-950">
+
+    <!-- Top Header & Workspace Controls -->
+    
+<section id="startScreen" aria-label="Main menu">
+ <div class="menu-shell">
+  <div class="menu-intro"><span class="menu-eyebrow">12 V DC • ELECTRICAL LAB</span><div class="menu-bolt" aria-hidden="true">ϟ</div><h1>CIRCUIT<br><em>CRAFT</em></h1><p>Make the connection.<br>Light up your next challenge.</p><span class="menu-meta">10 symbols · 9 wiring challenges</span></div>
+  <div class="menu-card" id="mainMenuPanel"><span class="menu-eyebrow">READY TO POWER UP?</span><h2>Your workshop awaits.</h2><button class="menu-primary" id="playGameBtn" onclick="startGame()">▶ Play</button><button onclick="openGameSettings()">⚙ Settings</button><p class="menu-footnote">Practice, connect, and learn. No account required.</p></div>
+  <div class="menu-card" id="settingsPanel" hidden><h2>Settings</h2><label for="masterVolume">Sound volume <output id="volumeValue">60%</output></label><input id="masterVolume" type="range" min="0" max="100" value="60" oninput="setGameVolume(this.value)"><div class="sound-options"><button id="settingsMusicBtn" onclick="toggleMusic()">Music: ON</button><button id="settingsSfxBtn" onclick="toggleSFX()">Effects: ON</button></div><button onclick="previewGameSound()">♪ Test sound</button><button class="menu-primary" onclick="showMainMenu()">Back to menu</button></div>
+ </div>
+</section>
+<div id="phoneNavigation"><label for="phoneLevelSelect">Lesson</label><select id="phoneLevelSelect" onchange="loadLevel(Number(this.value))" aria-label="Choose lesson"></select><button id="phoneHelpBtn" onclick="togglePhoneHelp()" aria-expanded="false">Instructions</button></div>
+    <header class="h-14 bg-stone-950 border-b border-stone-800 px-5 flex justify-between items-center z-20 shadow-xl shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="px-3 py-1 bg-amber-600 rounded-lg shadow-md text-stone-950 font-black text-sm tracking-wider border border-amber-400">
+                ⚡ CIRCUIT CRAFT
+            </div>
+            <div>
+                <h1 class="text-sm font-bold text-stone-100 flex items-center gap-2">
+                    Electrical Trainer & Simulator
+                    <span id="levelBadge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-900/70 text-amber-300 border border-amber-600/50">Level 1: Symbol Quiz</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Toolbar Buttons & Wire Color Picker -->
+        <div class="flex items-center gap-3">
+            <button onclick="showMainMenu()" class="px-3 py-1 bg-stone-800 text-amber-300 text-xs font-bold rounded border border-stone-700">☰ Menu</button>
+            <button id="phoneToolsBtn" type="button" aria-expanded="false" onclick="togglePhoneTools()">Tools</button>
+            <!-- Wire Color Palette -->
+            <div id="wireColorPicker" class="flex items-center gap-1 bg-stone-900 px-2.5 py-1 rounded-lg border border-stone-700 shadow-inner">
+                <span class="text-[10px] font-bold text-stone-400 uppercase mr-1">Wire:</span>
+                <button onclick="selectWireColor('red')" id="colorBtn_red" class="w-5 h-5 rounded-full bg-red-600 border-2 border-white ring-2 ring-amber-400 scale-110 shadow" title="Red: Power / Positive (+)" aria-label="Red Wire"></button>
+                <button onclick="selectWireColor('black')" id="colorBtn_black" class="w-5 h-5 rounded-full bg-stone-900 border-2 border-stone-400 shadow" title="Black: Ground / Negative (-)" aria-label="Black Wire"></button>
+                <button onclick="selectWireColor('blue')" id="colorBtn_blue" class="w-5 h-5 rounded-full bg-blue-500 border-2 border-stone-400 shadow" title="Blue: Signal / Series Bridge" aria-label="Blue Wire"></button>
+                <button onclick="selectWireColor('yellow')" id="colorBtn_yellow" class="w-5 h-5 rounded-full bg-amber-400 border-2 border-stone-400 shadow" title="Yellow: Control Feed" aria-label="Yellow Wire"></button>
+            </div>
+
+            <!-- Audio Controls -->
+            <button id="toggleMusicBtn" onclick="toggleMusic()" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded border border-stone-700">
+                🎵 Music: ON
+            </button>
+            <button id="toggleSoundBtn" onclick="toggleSFX()" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded border border-stone-700">
+                🔊 SFX: LOUD
+            </button>
+            
+            <!-- Circuit Actions -->
+            <button onclick="resetCurrentLevelWires()" class="px-3 py-1 bg-stone-800 hover:bg-amber-900/40 text-amber-300 text-xs font-bold rounded border border-amber-600/40 transition">
+                🔄 Clear Wires
+            </button>
+            <button id="verifyCircuitBtn" onclick="verifyCircuit()" class="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-black text-xs rounded shadow-lg transition shadow-emerald-950/50 flex items-center gap-1">
+                ✅ VERIFY CIRCUIT
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Workspace Container (Fixed Height Zero-Scroll Flex) -->
+    <nav id="panelControls" aria-label="Workspace view"><button id="postToolbar" hidden onclick="openPostProblems()">5 problem post-test</button><button id="certificateToolbarButton" hidden onclick="openCertificate()">Certificate of participation</button><button id="levelPanelToggle" type="button" aria-controls="levelSidebar phoneNavigation" aria-expanded="true" onclick="toggleLevelPanel()">◀ Hide levels</button><button id="instructionPanelToggle" type="button" aria-controls="objectivePanel wiringDetails modelNotes wireHelp wireLegend" aria-expanded="true" onclick="toggleInstructionPanel()">▲ Hide instructions</button></nav><section id="liveBar" aria-label="Live electrical readings"><div><strong id="liveVoltage">12.00 V</strong><strong id="liveCurrent">0.000 A</strong><span id="liveState" role="status">No current</span></div><div><button id="supplyButton" onclick="toggleSupply()" aria-pressed="true">Stop current</button></div></section><div id="wireLegend">Red: positive feed · Black: negative return · Yellow: incorrect · Blue: no current<br><small>Automatic colours for this DC game. Yellow marks an incorrect connection. Review the wiring and correct the yellow wire.</small></div>
+<div id="savedLevelBar"><span id="savedLevelStatus"></span><button id="stayNextLevel" hidden onclick="nextChosenLevel()">Continue level →</button></div><div id="appViewport" class="flex-1 flex overflow-hidden relative">
+        
+        <!-- Left Sidebar Curriculum Level Selector -->
+        <aside id="levelSidebar" class="w-64 bg-stone-950/95 border-r border-stone-800 flex flex-col shrink-0 z-10">
+            <div class="p-2.5 border-b border-stone-800 bg-stone-900/50">
+                <h2 class="text-[10px] font-extrabold text-amber-500 uppercase tracking-widest">Lab Curriculum (10 Levels)</h2>
+            </div>
+            <div class="flex-1 overflow-y-auto p-2 space-y-1 text-xs" id="levelMenuList">
+                <!-- Dynamically populated levels -->
+            </div>
+
+            <!-- Telemetry Diagnostic Monitor -->
+            <div class="p-3 border-t border-stone-800 bg-stone-950 text-[11px] font-mono space-y-1">
+                <div class="text-stone-400 font-extrabold font-sans uppercase tracking-wider mb-0.5 flex justify-between text-[10px]">
+                    <span>Power Supply</span>
+                    <span id="powerStatus" class="text-emerald-400">12.0V ACTIVE</span>
+                </div>
+                <div class="flex justify-between text-stone-300">
+                    <span>Source EMF:</span>
+                    <span class="text-amber-400 font-bold">12.00 V</span>
+                </div>
+                <div class="flex justify-between text-stone-300">
+                    <span>Total Current:</span>
+                    <span id="totalCurrentMeter" class="text-cyan-400 font-bold">0.00 A</span>
+                </div>
+                <div class="flex justify-between text-stone-300">
+                    <span>Circuit State:</span>
+                    <span id="circuitStateText" class="text-amber-400 font-bold">Open Loop</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Wooden Board Workbench Canvas -->
+        <main class="flex-1 relative flex flex-col overflow-hidden beige-wood-board" id="workbenchContainer">
+            
+            <!-- Objective Header Overlay -->
+            <div id="objectivePanel" class="p-3 bg-stone-950/90 border-b border-stone-800 flex justify-between items-center z-10 shadow-md shrink-0">
+                <div class="max-w-3xl">
+                    <h2 id="taskTitle" class="text-sm font-black text-amber-400 flex items-center gap-2">Level Objective</h2>
+                    <p id="taskDesc" class="text-xs text-stone-300 mt-0.5 leading-snug">Instructions will load here.</p>
+                </div>
+                <div id="quizScoreBadge" class="hidden px-3 py-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold rounded-lg">
+                    Score: <span id="quizScore">0</span> / <span id="quizTotal">10</span>
+                </div>
+            </div>
+
+            <!-- LEVEL 1: SCHEMATIC SYMBOL QUIZ -->
+            <div id="quizViewContainer" class="flex-1 flex flex-col items-center justify-center p-4 z-10 hidden">
+                <div id="quizCard" class="bg-stone-950/95 border border-stone-800 rounded-2xl p-6 max-w-lg w-full shadow-2xl backdrop-blur-md">
+                    <div id="quizHeading" class="text-center mb-4">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20" id="quizProgress">Question 1 of 10</span>
+                        <h3 class="text-xl font-black text-stone-100 mt-1">Identify Schematic Symbol</h3>
+                        <p class="text-xs text-stone-400">Select the correct symbol name to practice before wiring.</p>
+                    </div>
+
+                    <div id="quizSymbolPanel" class="bg-stone-900 border border-stone-800 rounded-xl p-4 mb-4 flex items-center justify-center relative shadow-inner h-36">
+                        <svg id="quizSymbolSvg" class="w-28 h-28" viewBox="0 0 100 100"></svg>
+                    </div>
+
+                    <div id="quizOptionsGrid" class="grid grid-cols-2 gap-2.5 mb-3"></div>
+                    <button id="quizNextQuestion" hidden onclick="nextQuizQuestion()">Next question →</button><div id="quizFeedback" class="text-center text-xs font-bold h-5"></div>
+                </div>
+            </div>
+
+            <!-- HARDWARE WIRING WORKSPACE CANVAS -->
+            <section id="wiringStatusPanel" hidden aria-label="Wiring check"><div id="wiringStatus" role="status" aria-live="polite" data-state="pending">Wiring incomplete</div><p id="wiringDetails"></p><details id="modelNotes"><summary>12 V DC model · 10 Ω lamps — assumptions &amp; practical guidance</summary><p>Readings use a 12 V DC source with 0.10 Ω internal resistance and fixed 10 Ω lamps. Closed switches and wires have zero resistance in the main model. Loaded source voltage may be below 12 V.</p><p>Wire colours update automatically: red positive feed, black negative return, yellow incorrect, blue no current. Blue does not mean a physical conductor is safe to touch. Incorrect connections remain editable until the level is complete.</p><p>Real lamps change resistance as they heat. This simplified model does not predict heating, inrush, or component damage. Brightness approximates calculated power.</p><p>The green indicator means the labelled terminal networks match this lesson. Equivalent junction wiring is accepted; other terminal assignments may be rejected. All required switches must be ON to complete a level.</p><p>This is a virtual learning activity. Physical wiring requires separate instructor-approved procedures and suitable equipment. The game does not provide installation or safety certification.</p><p>Reference: <a href="https://openstax.org/books/university-physics-volume-2/pages/10-3-kirchhoffs-rules" target="_blank" rel="noopener">OpenStax: Kirchhoff’s rules</a></p></details></section><div id="boardTools" hidden><div id="wireHelp"><strong>Flexible wires</strong><br>Connect two terminals. Click a wire to attach a pin; drag the pin to shape it. Double-click a pin to remove it. Esc cancels.</div><div class="wire-actions"><button id="autoRouteBtn" onclick="autoRouteSelected()" disabled>Reset wire shape</button><button id="deleteWireBtn" onclick="deleteSelectedWire()" disabled>Delete selected wire</button></div></div>
+            <div id="wiringWorkspace" class="flex-1 relative w-full h-full overflow-hidden"><div id="boardSurface">
+                <!-- SVG Wire Vectors Layer -->
+                <svg id="wireCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-10">
+                    <defs>
+                        <filter id="wireDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+                            <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+                        </filter>
+                    </defs>
+                </svg>
+
+                <!-- Confetti Visual Layer -->
+                <canvas id="confettiCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-20"></canvas>
+
+                <!-- Dynamic Electrical Components Layer -->
+                <div id="componentsLayer" class="absolute inset-0 z-0"></div>
+
+                <!-- DRAGGABLE DIGITAL MULTIMETER WIDGET -->
+                <div id="multimeterWidget" class="absolute top-4 right-4 w-44 bg-stone-950 border-2 border-stone-700 rounded-xl p-3 shadow-2xl z-30 cursor-move">
+                    <div class="flex justify-between items-center mb-1.5 border-b border-stone-800 pb-1">
+                        <span class="text-[10px] font-black text-stone-400 uppercase tracking-wider">Source monitor</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    </div>
+                    <div class="bg-emerald-950/80 border border-emerald-800/80 rounded p-1.5 text-center mb-2">
+                        <div id="multimeterReadout" class="font-mono text-base font-extrabold text-emerald-400 tracking-widest">0.00 V</div>
+                        <div id="multimeterMode" class="text-[9px] font-mono text-emerald-600 font-bold">LOADED DC VOLTAGE</div>
+                    </div>
+                    <div class="text-[9px] text-stone-500 text-center font-bold">Modeled source terminal voltage</div>
+                </div>
+            </div>
+
+            </div>
+            <!-- Red Flash Screen FX Layer -->
+            <div id="shockOverlay" class="absolute inset-0 pointer-events-none z-40 transition-opacity duration-150 opacity-0 bg-red-600/70"></div>
+        </main>
+    </div>
+
+<div id="lessonResult" hidden role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="result-card"><h2 id="resultTitle"></h2><p id="resultProgress"></p><p id="finalScore" hidden></p><button id="certificateReflectionButton" hidden onclick="openCertificate()">Please enter your name — get certificate</button><label for="understandAnswer">Do you understand the wiring and how the current flows?</label><select id="understandAnswer" onchange="document.getElementById('resultContinue').disabled=!this.value"><option value="">Choose your answer</option><option>Yes, I understand</option><option>I need more practice</option><option>I need help from my teacher</option></select><button id="resultContinue" onclick="continueLesson()" disabled>Continue level</button><button onclick="stayOnLevel()">Stay and review this level</button><label for="resultLevel">Go back to a level</label><select id="resultLevel"></select><button onclick="chooseResultLevel()">Go to selected level</button><button onclick="exitLesson()">Exit to menu</button></div></div>
+<div id="correctToast" hidden role="status">★ Correct! Nicely done!</div>
+<div id="celebrationOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="celebrationTitle"><div id="celebrationParticles" aria-hidden="true"></div><div class="celebration-card"><div class="celebration-star" aria-hidden="true">★</div><h2 id="celebrationTitle">Circuit complete!</h2><p id="celebrationCaption"></p><p id="celebrationTotalScore" hidden aria-live="polite" style="font-size:clamp(24px,6vw,36px);font-weight:900;color:#fbbf24"></p><p>Your next step: reflect on what you learned.</p><button id="certificateCelebrationButton" hidden onclick="openCertificate()">Please enter your name — get certificate</button><button id="celebrationNext" onclick="finishCelebration()">Continue to question</button></div></div>
+<div id="certificateDialog" hidden role="dialog" aria-modal="true" aria-labelledby="certificateTitle"><div class="certificate-card"><h2 id="certificateTitle">Your certificate of participation</h2><form onsubmit="prepareCertificate(event)"><label for="certificateName">Please enter your name</label><input id="certificateName" name="name" autocomplete="name" maxlength="80" required oninput="this.setCustomValidity('');invalidateCertificate()" placeholder="Full name as it should appear"><p>Your name stays on this device and is used only to create this certificate.</p><button type="submit">Create my certificate</button></form><p id="certificateMessage" role="status"></p><img id="certificatePreview" hidden alt="Your participation certificate"><a id="certificateDownload" hidden download onclick="afterCertificateDownload()">Download certificate</a><button onclick="closeCertificate()">Back to game</button></div></div>
+<div id="postDialog" hidden role="dialog" aria-modal="true" aria-labelledby="postTitle"><section class="post-card"><h2 id="postTitle" tabindex="-1">Create a new wiring problem scenario</h2><div id="postIntro"><p>Your certificate download has been requested. Ready for five wiring problems?</p><p>This post-test has a separate score out of 5. It does not change your level score or certificate.</p><button onclick="startPostProblems()">Start the 5 problems</button></div><div id="postQuestion" hidden><p id="postProgress"></p><h3 id="postHeading"></h3><p id="postSituation"></p><div id="postDiagram" aria-label="Circuit description"></div><div id="postOptions"></div><p id="postFeedback" role="status" aria-live="polite"></p><div class="post-actions"><button id="postPrevious" onclick="movePostProblem(-1)">Previous problem</button><button id="postNext" onclick="movePostProblem(1)">Next problem</button></div></div><div id="postSummary" hidden><h3>Post-test completed</h3><p id="postScore"></p><div id="postReview"></div><button onclick="reviewPostProblems()">Review my answers</button></div><p class="post-note">These questions use the game's simplified DC circuits. They are not instructions for wiring a 230 V board.</p><button onclick="closePostProblems()">Back to game — keep my answers</button></section></div>
+    <!-- Modal Dialog -->
+    <div id="feedbackModal" class="fixed inset-0 bg-stone-950/80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-stone-900 border border-stone-700 rounded-2xl p-5 max-w-sm w-full shadow-2xl text-center space-y-3">
+            <div id="modalIcon" class="text-4xl">⚡</div>
+            <h3 id="modalTitle" class="text-lg font-black text-stone-100">Verification Result</h3>
+            <p id="modalBody" class="text-xs text-stone-300 leading-relaxed">Details appear here.</p>
+            <button id="nextLevelBtn" hidden onclick="advanceVerifiedLevel()" class="w-full py-2 bg-emerald-500 text-stone-950 font-black rounded-lg text-xs">Next lesson</button>
+            <button onclick="closeModal()" class="w-full py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-black rounded-lg text-xs shadow-md">
+                Continue Laboratory
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script-1.js"></script>
+<script src="js/script-2.js"></script>
+<script id="deviceFitRuntime" src="js/script-3.js"></script><script id="visibleLevelRuntime" src="js/script-4.js"></script></body>
+</html>
